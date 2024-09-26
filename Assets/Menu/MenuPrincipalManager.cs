@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipalManager : MonoBehaviour
 {
-    public void Jogar(){
+    public void Jogar()
+    {
         SceneManager.LoadScene("Jogo1");
     }
 
-    public void Sair(){
-
+    public void Sair()
+    {
+        
     }
 }
