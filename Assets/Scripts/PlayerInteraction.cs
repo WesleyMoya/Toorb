@@ -27,7 +27,7 @@ public class PlayerInteraction : MonoBehaviour
         // Atualiza a posição do ícone ao lado do personagem
         if (interactionIcon.activeSelf)
         {
-            Vector3 iconPosition = transform.position + new Vector3(0.5f, 0.5f, 0); // Ajusta o deslocamento conforme necessário
+            Vector3 iconPosition = transform.position + new Vector3(0.8f, 0.8f, 0); // Ajusta o deslocamento conforme necessário
             interactionIcon.transform.position = iconPosition;
         }
     }
