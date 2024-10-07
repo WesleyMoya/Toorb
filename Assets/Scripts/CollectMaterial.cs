@@ -16,14 +16,13 @@ public class CollectibleMaterial : MonoBehaviour, IInteractable
     
     private void Start()
     {
-        animator = GetComponent<Animator>(); // Obtém o componente Animator
-        inventoryManager = FindObjectOfType<InventoryManager>();  // Procura automaticamente o InventoryManager na cena
+        animator = GetComponent<Animator>();
+        inventoryManager = FindObjectOfType<InventoryManager>();
 
     }
 
     public void Interact()
     {
-        // Desativa o collider
         GetComponent<BoxCollider2D>().enabled = false;
 
         // Toca a animação de desaparecimento com o trigger específico
@@ -38,22 +37,17 @@ public class CollectibleMaterial : MonoBehaviour, IInteractable
         {
             inventoryManager.AddMaterial(materialType, value);
         }
-        else
-        {
-            Debug.LogError("InventoryManager não atribuído!");
-        }
     }
 
     private string GetAnimationTrigger()
     {
-        // Define o trigger da animação baseado no tipo e tamanho do material
         return $"{materialType}{size}_Disappear"; // Exemplo: "PlasticMini_Disappear"
     }
 
     private IEnumerator DestroyAfterAnimation()
     {
-        // Define o tempo exato da animação (ajuste conforme necessário)
-        float animationDuration = 0.5f; // Substitua pelo tempo real da sua animação
+        // Corrotina para esperar a animação acabar
+        float animationDuration = 0.5f; 
         yield return new WaitForSeconds(animationDuration);
 
         // Destrói o objeto

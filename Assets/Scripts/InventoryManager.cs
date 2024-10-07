@@ -5,12 +5,10 @@ using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
-    // Variáveis públicas separadas para armazenar as quantidades de cada material
     public int plasticQnt = 0;
     public int metalQnt = 0;
     public int woodQnt = 0;
 
-    // Referências aos componentes TextMeshPro para exibir os valores de cada material
     [SerializeField] private TextMeshProUGUI plasticText;
     [SerializeField] private TextMeshProUGUI metalText;
     [SerializeField] private TextMeshProUGUI woodText;
@@ -39,11 +37,9 @@ public class InventoryManager : MonoBehaviour
                 break;
         }
 
-        // Atualiza o UI quando o material é coletado
         UpdateUI();
     }
 
-    // Função para atualizar o texto do UI com base na quantidade de materiais
     private void UpdateUI()
     {
         plasticText.text = "Plastic: " + plasticQnt.ToString();

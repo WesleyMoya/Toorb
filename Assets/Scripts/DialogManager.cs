@@ -1,33 +1,33 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Certifique-se de incluir a namespace do TextMeshPro
+using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
-    [SerializeField] private Image npcIcon; // Referência à imagem do ícone do NPC
-    [SerializeField] private TextMeshProUGUI npcName; // Referência ao texto do nome do NPC
-    [SerializeField] private TextMeshProUGUI dialogContent; // Referência ao texto do conteúdo do diálogo
-    [SerializeField] private GameObject dialogPanel; // Referência ao painel da caixa de diálogo
+    [SerializeField] private Image npcIcon;
+    [SerializeField] private TextMeshProUGUI npcName;
+    [SerializeField] private TextMeshProUGUI dialogContent;
+    [SerializeField] private GameObject dialogPanel;
     [SerializeField] private GameObject hud;
+
     private void Start()
     {
-        dialogPanel.SetActive(false); // Certifique-se de que o painel esteja desativado no início
+        dialogPanel.SetActive(false);
     }
 
     // Método para iniciar o diálogo com os parâmetros
     public void StartDialog(Sprite icon, string name, string content)
     {
-        npcIcon.sprite = icon; // Define o ícone do NPC
-        npcName.text = name; // Define o nome do NPC
-        dialogContent.text = content; // Define o conteúdo do diálogo
+        npcIcon.sprite = icon;
+        npcName.text = name;
+        dialogContent.text = content;
         hud.SetActive(false);
-        dialogPanel.SetActive(true); // Ativa o painel da caixa de diálogo
+        dialogPanel.SetActive(true);
     }
 
-    // Método para fechar a caixa de diálogo
     public void CloseDialog()
     {
-        dialogPanel.SetActive(false); // Desativa o painel da caixa de diálogo
+        dialogPanel.SetActive(false);
         hud.SetActive(true);
     }
 }

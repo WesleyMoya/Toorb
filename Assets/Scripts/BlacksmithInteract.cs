@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class Blacksmith : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Sprite npcIcon; // Ícone do NPC
-    [SerializeField] private string npcName = "Ferreiro"; // Nome do NPC
+    [SerializeField] private Sprite npcIcon;
+    [SerializeField] private string npcName = "Ferreiro";
     [SerializeField] private string dialogContent = "Bem-vindo ao ferreiro! O que você gostaria de fazer?";
     
-    private DialogManager dialogManager; // Referência ao gerenciador de diálogo
+    private DialogManager dialogManager;
 
     private void Start()
     {
-        dialogManager = FindObjectOfType<DialogManager>(); // Encontra o gerenciador de diálogo na cena
+        dialogManager = FindObjectOfType<DialogManager>();
     }
 
     public void Interact()

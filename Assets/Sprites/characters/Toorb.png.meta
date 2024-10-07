@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c195e1d85838cf3489e8fb0c988fdbdb
+guid: 98babfed4e88f0c439fadd9d166ff369
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,343 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cyclodrill_0
+      name: Toorb_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3898c84d9a6005e4781edfe3aad1771b
+      internalID: 459586775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235ebf3832ec46d47943ba329b008b6a
+      internalID: 1935717155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88ed18dae86e5e44acc2386645797fc
+      internalID: -1533130438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a937d21a8aba21c48bab6ccd1b08801e
+      internalID: 871902131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313c967aaf42e164cbcf88723d70e887
+      internalID: -1272944318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4a8b9eacab03a43b706ae391a993ff
+      internalID: -465877585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e41a2c485691a498c8268a2c74dbf7
+      internalID: 1976510220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4f5cf769ed0ec4b8ec2073286475a7
+      internalID: -1725006766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fec028983843d4b919a7a74a5e57a1
+      internalID: -221648318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5875d7b895d814688910fe97331c50
+      internalID: 1796561322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408a0113ec69ee547a42a93429aab0ed
+      internalID: 714807555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762bba8a22cac5b44baad42c0a72e2ca
+      internalID: -1135899107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e95f61a331136844a9238094e786a5f
+      internalID: -1186837998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44de964b8e2f42d40ba22ff7f09da7d6
+      internalID: -767232861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1aae166ba3d91c4eb897f180fd641f4
+      internalID: 1672737147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f7ee00ba3156548b8b79d85324be39
+      internalID: 694971865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toorb_16
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94167b44e29920d4191f45a44ba15927
-      internalID: 1079194434
+      spriteID: 75674c86273cf5646afffc3870408b53
+      internalID: 1179938560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_1
+      name: Toorb_17
       rect:
         serializedVersion: 2
         x: 32
@@ -132,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cc46f2a8a72e23419667ec9a38e502d
-      internalID: 1664136784
+      spriteID: ccebde364fc460d4b90d8b98184a4801
+      internalID: -1091093514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_2
+      name: Toorb_18
       rect:
         serializedVersion: 2
         x: 64
@@ -153,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04a797551b578254b99b485227a65552
-      internalID: -248718180
+      spriteID: 9506e240cb4a71049af9a2502922083d
+      internalID: -2021677490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_3
+      name: Toorb_19
       rect:
         serializedVersion: 2
         x: 96
@@ -174,98 +510,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88761f3a148cec847a47c7038e04c366
-      internalID: -1208341534
+      spriteID: 5438dae579e39394daca5de3c3b3ae68
+      internalID: 1769180203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c8c49430d7932e4982cbcca9645a859
-      internalID: -1217765018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cyclodrill_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bad6523c02d18fe4e952b170e449d767
-      internalID: -1630872073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cyclodrill_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8baefba49cc8a1741b290304d863c53f
-      internalID: -810041615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cyclodrill_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 517e3c75acaaa7e4c8e9fed074dcdf1a
-      internalID: 719481520
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cyclodrill_8
+      name: Toorb_20
       rect:
         serializedVersion: 2
         x: 0
@@ -279,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f686e3f815447d54fb20659c664aa7a2
-      internalID: 2025605911
+      spriteID: ef0b6b22bf3f3d44d9273bcf2a148170
+      internalID: -1164114250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_9
+      name: Toorb_21
       rect:
         serializedVersion: 2
         x: 32
@@ -300,14 +552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 462e118f390adac48a9d56245683ec04
-      internalID: 986427314
+      spriteID: 6cc489844eb0e844aa8b62532918edeb
+      internalID: -797189062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_10
+      name: Toorb_22
       rect:
         serializedVersion: 2
         x: 64
@@ -321,14 +573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82c3aa1e84e01624e95a9aa3c1589d69
-      internalID: -1105615014
+      spriteID: 22c1154cfd54ba145bbd94af083fa8b3
+      internalID: 384810628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_11
+      name: Toorb_23
       rect:
         serializedVersion: 2
         x: 96
@@ -342,14 +594,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 687570a05ba7c65449afcbb8f5bd2d97
-      internalID: 967454192
+      spriteID: 886c2497b9682ff48861026cc999c472
+      internalID: 1387744847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_12
+      name: Toorb_24
       rect:
         serializedVersion: 2
         x: 0
@@ -363,14 +615,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 649068754ee2b6d4a85d4f7d72df7f56
-      internalID: 544558319
+      spriteID: 262a562078fb866409b343b757b94938
+      internalID: -1062046144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_13
+      name: Toorb_25
       rect:
         serializedVersion: 2
         x: 32
@@ -384,14 +636,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16a1fe8101a830d44bacde2518285a31
-      internalID: -1629657976
+      spriteID: 00ae070584f7d424691624e848cfeb1d
+      internalID: 1501440418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_14
+      name: Toorb_26
       rect:
         serializedVersion: 2
         x: 64
@@ -405,14 +657,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91c9ba06adab19f47a116afcca70e1ce
-      internalID: -181458040
+      spriteID: b4e299a760ff13d46be45e74daa47346
+      internalID: 563318154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_15
+      name: Toorb_27
       rect:
         serializedVersion: 2
         x: 96
@@ -426,14 +678,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 651911bf131512a4eb7770b033108e51
-      internalID: -1185868214
+      spriteID: ea95877db46275648b24d06c854c60db
+      internalID: 77969429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_16
+      name: Toorb_28
       rect:
         serializedVersion: 2
         x: 0
@@ -447,14 +699,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbe8515f1caa3f04db2264fe7ed302d0
-      internalID: -1842580808
+      spriteID: aad05d1ed520b7041ba66f7d8d5bbb0b
+      internalID: -86529534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_17
+      name: Toorb_29
       rect:
         serializedVersion: 2
         x: 32
@@ -468,14 +720,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f5bf41b52f37e143a3f5b7c553b3609
-      internalID: -1838831147
+      spriteID: 6cfbc8e65448e2040878d50a875a6467
+      internalID: -1842171013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_18
+      name: Toorb_30
       rect:
         serializedVersion: 2
         x: 64
@@ -489,14 +741,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adee20ed5ddecfe45ab1abb0897517d0
-      internalID: -1973771842
+      spriteID: 06ce9934c743a43449fceea6e77fa915
+      internalID: -662549658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_19
+      name: Toorb_31
       rect:
         serializedVersion: 2
         x: 96
@@ -510,98 +762,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b703a50d209b57340b29c46009a548cf
-      internalID: -580601211
+      spriteID: 35f25a57183f1f94ab12f009f8e2d806
+      internalID: 1552649915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_20
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5a3c1af5fac9bd41ab1845ef0330d57
-      internalID: 34462299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cyclodrill_21
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84493f7674282404389faa2d1ffeaf4d
-      internalID: 1030447185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cyclodrill_22
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8a18daed129ae546bf6ee1fa53814a6
-      internalID: 1446973232
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cyclodrill_23
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab40e8a9629897c4e88e7b027f9cfafa
-      internalID: 440121781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cyclodrill_24
+      name: Toorb_32
       rect:
         serializedVersion: 2
         x: 0
@@ -615,14 +783,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45615b500e0342443a29254a2d4e87a9
-      internalID: 1447251929
+      spriteID: 42c52a501fea6e84fb29af8e9369d328
+      internalID: -1096065409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_25
+      name: Toorb_33
       rect:
         serializedVersion: 2
         x: 32
@@ -636,14 +804,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ed29a757de0b4f42b4f3bd4cad279d3
-      internalID: 214346621
+      spriteID: 1631776dbb503ca4b9b2994fc15d1768
+      internalID: -736365027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_26
+      name: Toorb_34
       rect:
         serializedVersion: 2
         x: 64
@@ -657,14 +825,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26a7dee297cf80a438e209cbb46bc3cb
-      internalID: 1493311007
+      spriteID: 05504fc150728c941bfb9f227bb548bb
+      internalID: 234570007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_27
+      name: Toorb_35
       rect:
         serializedVersion: 2
         x: 96
@@ -678,14 +846,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7968e4dae0ed72a4e8fc0fd5d1f8dd3f
-      internalID: 68777406
+      spriteID: d385c0874b68c9149a8468653bb6e9ad
+      internalID: -825629101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_28
+      name: Toorb_36
       rect:
         serializedVersion: 2
         x: 128
@@ -699,14 +867,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06c763af420b57f479343ced55a4ab30
-      internalID: 821669842
+      spriteID: a2a96b94b78c02e42a07a21c3f91e122
+      internalID: 996679176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_29
+      name: Toorb_37
       rect:
         serializedVersion: 2
         x: 160
@@ -720,14 +888,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef2d6cd38397dcd4e8d4d151c41dac45
-      internalID: -1521487772
+      spriteID: 4f5ac00316266984d85992cd4a260752
+      internalID: -1559693192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_30
+      name: Toorb_38
       rect:
         serializedVersion: 2
         x: 192
@@ -741,14 +909,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f08ae5c051b77e49ba6505c86ab9f07
-      internalID: 1954284824
+      spriteID: ad4833d678f99eb4cb12456e5f1b262c
+      internalID: 372868284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_31
+      name: Toorb_39
       rect:
         serializedVersion: 2
         x: 224
@@ -762,14 +930,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b51375c2a5e5c6c40b45f951a4600e2c
-      internalID: 824891191
+      spriteID: 3528c02bf56aae7439c03afac932a763
+      internalID: -18275453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_32
+      name: Toorb_40
       rect:
         serializedVersion: 2
         x: 256
@@ -783,14 +951,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6e55e0b3d9b73f4a9d8fc2e362c8bf6
-      internalID: -2131716008
+      spriteID: bb814b05ea77b2941af511b83b172211
+      internalID: -359135041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_33
+      name: Toorb_41
       rect:
         serializedVersion: 2
         x: 0
@@ -804,14 +972,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 685d8cb00624546469b1fa497eaf9918
-      internalID: -1051052633
+      spriteID: 9cb39f59a16257045838519692c674b0
+      internalID: 380959879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_34
+      name: Toorb_42
       rect:
         serializedVersion: 2
         x: 32
@@ -825,14 +993,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 299e6c5b203b8874c8b143e09543fca5
-      internalID: 48239021
+      spriteID: 61c2b35b508e8224f9dcf4858b476b91
+      internalID: -1432325640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_35
+      name: Toorb_43
       rect:
         serializedVersion: 2
         x: 64
@@ -846,14 +1014,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c8721de20bacef4f8b011ab09928a60
-      internalID: -307181351
+      spriteID: fdc4f57509c7599488b09aaee9f06812
+      internalID: 1819662525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_36
+      name: Toorb_44
       rect:
         serializedVersion: 2
         x: 96
@@ -867,14 +1035,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0474a446bda48b84090c4f1b9e142358
-      internalID: 2086585578
+      spriteID: 6631099b02fb39a4493e52ae3033ed41
+      internalID: 677202873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_37
+      name: Toorb_45
       rect:
         serializedVersion: 2
         x: 128
@@ -888,14 +1056,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 596b66802fb9a5540b45c7c25aa78c50
-      internalID: -1588641938
+      spriteID: 8fb1734e734904a41a068432385cca44
+      internalID: -1358424231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_38
+      name: Toorb_46
       rect:
         serializedVersion: 2
         x: 160
@@ -909,14 +1077,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46d6f47be00673e458291a141498cd5d
-      internalID: 1835993642
+      spriteID: 9a7c700beca71ef4ab6737ff96a5a405
+      internalID: 93107976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_39
+      name: Toorb_47
       rect:
         serializedVersion: 2
         x: 192
@@ -930,14 +1098,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6d15d2fffb338244b97e75a4c10d97e
-      internalID: -199592915
+      spriteID: 518065d9423fa1b429e5df3c476a0047
+      internalID: -1153561293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_40
+      name: Toorb_48
       rect:
         serializedVersion: 2
         x: 224
@@ -951,14 +1119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2da2e9a878b72aa4d93d5673c8ecf7dc
-      internalID: -174083384
+      spriteID: b006db534a1d9204d9a05e39c85c64de
+      internalID: 1206001286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_41
+      name: Toorb_49
       rect:
         serializedVersion: 2
         x: 256
@@ -972,14 +1140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea591c8618b85724a9aeb6ac8796ff07
-      internalID: 1315037509
+      spriteID: 57f5dcff359cb7a4f9bcac0132f52393
+      internalID: 574334018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_42
+      name: Toorb_50
       rect:
         serializedVersion: 2
         x: 0
@@ -993,14 +1161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b89f83c13842e8d43983701ad784a9bd
-      internalID: 2127292734
+      spriteID: 1ec35e21b7ba5fa43b72f2a326da71fa
+      internalID: -1204805461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_43
+      name: Toorb_51
       rect:
         serializedVersion: 2
         x: 32
@@ -1014,14 +1182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 763c166abb539d04195e73da757ef977
-      internalID: -1716728438
+      spriteID: 6e174b61e71a308438fb8b8c5b79cb42
+      internalID: 1156637122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_44
+      name: Toorb_52
       rect:
         serializedVersion: 2
         x: 64
@@ -1035,14 +1203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72ef9652c9b419e44a1401ac5b751ebc
-      internalID: -626950362
+      spriteID: 2f3a69130416bb6428e7af61dcdb2a1d
+      internalID: 405656013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_45
+      name: Toorb_53
       rect:
         serializedVersion: 2
         x: 96
@@ -1056,14 +1224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de70a50cea277814d99cbd0ec947fa8c
-      internalID: -1571002062
+      spriteID: 32929e2237da13a4a87cff537d19437f
+      internalID: -794051199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_46
+      name: Toorb_54
       rect:
         serializedVersion: 2
         x: 128
@@ -1077,14 +1245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ab33141383d0ac428f3c6bb0a22881d
-      internalID: 571846584
+      spriteID: 4cd8553ad321c1548afe6b4a9d09621f
+      internalID: -1611507168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_47
+      name: Toorb_55
       rect:
         serializedVersion: 2
         x: 160
@@ -1098,14 +1266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3d88378e0ad12f44963729657c072b3
-      internalID: -2128489319
+      spriteID: ffab48e0df5aa224f89629a1875e789e
+      internalID: 1836208797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_48
+      name: Toorb_56
       rect:
         serializedVersion: 2
         x: 192
@@ -1119,14 +1287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e4cc95d4b113cd4898e5fd0b315bced
-      internalID: 314765027
+      spriteID: eec3d022a69c7a742bd1f209edfd86e7
+      internalID: 1179873592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_49
+      name: Toorb_57
       rect:
         serializedVersion: 2
         x: 224
@@ -1140,14 +1308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 971fd8dd53bc1fa4b898ebf0a70a2fc1
-      internalID: -1190893851
+      spriteID: 464a6593466317a40b3442a26051da47
+      internalID: -763877370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_50
+      name: Toorb_58
       rect:
         serializedVersion: 2
         x: 256
@@ -1161,14 +1329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6d7a6c356ee7984da258f347a06435f
-      internalID: -1199578694
+      spriteID: f7b49996faa437646ab1cbee24af5541
+      internalID: -240382528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_51
+      name: Toorb_59
       rect:
         serializedVersion: 2
         x: 0
@@ -1182,14 +1350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41dc69667a27cc941abf9024b7dd5380
-      internalID: 1133523541
+      spriteID: 536fbaf4ddc143d4dafa1fa9b4cee458
+      internalID: 1100761046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_52
+      name: Toorb_60
       rect:
         serializedVersion: 2
         x: 32
@@ -1203,14 +1371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d84d86d8c13fde441b18ee6ada0a7355
-      internalID: 1376223405
+      spriteID: c63eed83d2e377e4b9dbf76a504aa08c
+      internalID: 1625169227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_53
+      name: Toorb_61
       rect:
         serializedVersion: 2
         x: 64
@@ -1224,14 +1392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c68c9f2d71d2d4d429943f9153bea41a
-      internalID: -1879640852
+      spriteID: c923bdff380faf14ab56ec7375a69f6d
+      internalID: -922560238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_54
+      name: Toorb_62
       rect:
         serializedVersion: 2
         x: 96
@@ -1245,14 +1413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75d1b93e043a83142a802e3aaa47ea70
-      internalID: -625408253
+      spriteID: 112144efdd63f2548aeace38a5d3d673
+      internalID: 150870354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_55
+      name: Toorb_63
       rect:
         serializedVersion: 2
         x: 128
@@ -1266,14 +1434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c660cbc81495d3b4e9f0de47919d9168
-      internalID: -1163967806
+      spriteID: 637f40e50aa125e4f85f1736369ac95f
+      internalID: -1919069802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_56
+      name: Toorb_64
       rect:
         serializedVersion: 2
         x: 160
@@ -1287,14 +1455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75022c7dcb570be4182ad8cea6997b55
-      internalID: -2000638456
+      spriteID: 74a4ad73b3fe3da4f9c8794523578e1e
+      internalID: -883016575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_57
+      name: Toorb_65
       rect:
         serializedVersion: 2
         x: 192
@@ -1308,14 +1476,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe93522d729219e41868c1da6c34b75a
-      internalID: 2093659639
+      spriteID: 45d49090f26348446acc6e7e41435919
+      internalID: -1684869343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_58
+      name: Toorb_66
       rect:
         serializedVersion: 2
         x: 224
@@ -1329,14 +1497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c55d9be5f41e1e744a1f215599bdd9a6
-      internalID: 2108120158
+      spriteID: 2f0852caf1b3d65459d4ed8f008fd78a
+      internalID: 932457332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_59
+      name: Toorb_67
       rect:
         serializedVersion: 2
         x: 256
@@ -1350,14 +1518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e92024d6d1cc5c4e861c3f23b1bd69e
-      internalID: 807041092
+      spriteID: 62b4f0c596ceb42439013a6564c6e6f5
+      internalID: 1286954094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_60
+      name: Toorb_68
       rect:
         serializedVersion: 2
         x: 0
@@ -1371,14 +1539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dede510521fbdd74298c082bd15619a8
-      internalID: -2053127692
+      spriteID: 55fade96467bfe540849921b23a0e069
+      internalID: 266171087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_61
+      name: Toorb_69
       rect:
         serializedVersion: 2
         x: 32
@@ -1392,14 +1560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ba7310db4b32149b8ee5b65f535b5b
-      internalID: -1721727330
+      spriteID: ec1aab81c363cd24d9851e465c5fe512
+      internalID: 776096406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_62
+      name: Toorb_70
       rect:
         serializedVersion: 2
         x: 64
@@ -1413,14 +1581,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d999fc04a604904a9fccd5967318eee
-      internalID: -1833051824
+      spriteID: a2120cc9fc02dd44eaafc843443d0c33
+      internalID: 744627263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_63
+      name: Toorb_71
       rect:
         serializedVersion: 2
         x: 96
@@ -1434,14 +1602,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22f3970a9a3bc924280eba3b23a0f06b
-      internalID: -1405910333
+      spriteID: f5b0d5f3f33c9f64a9d9fc797187288d
+      internalID: 1161863609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_64
+      name: Toorb_72
       rect:
         serializedVersion: 2
         x: 0
@@ -1455,14 +1623,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff5cff4fa0472d249b436ff6d4148b9e
-      internalID: 1444292385
+      spriteID: 035bdbed5f0e5104d9a210618902e994
+      internalID: 1692111028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_65
+      name: Toorb_73
       rect:
         serializedVersion: 2
         x: 32
@@ -1476,14 +1644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d653a4c5d87e9ae45b23c9b797a15ea0
-      internalID: 1308620532
+      spriteID: 2e308fd38a0ad1a4da869841332fa9ac
+      internalID: -272829720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_66
+      name: Toorb_74
       rect:
         serializedVersion: 2
         x: 64
@@ -1497,14 +1665,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ca44cca2589b7e4fa6d6d1723e7df14
-      internalID: -1092047052
+      spriteID: dc2ef6c509787a24d839c074a218f993
+      internalID: 1973557026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_67
+      name: Toorb_75
       rect:
         serializedVersion: 2
         x: 96
@@ -1518,14 +1686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 359fe73e972cac545b18e14fba296110
-      internalID: -64651316
+      spriteID: 7a3038b5ba1a41a49bd492325397bb4a
+      internalID: -1421123040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_68
+      name: Toorb_76
       rect:
         serializedVersion: 2
         x: 0
@@ -1539,14 +1707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3162bd02589db34f833926b9acf401a
-      internalID: 2121573788
+      spriteID: 6acfb9c7206470f4abba59ca50588341
+      internalID: 406595851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_69
+      name: Toorb_77
       rect:
         serializedVersion: 2
         x: 32
@@ -1560,14 +1728,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1213044661f8aa743a7ea1c3ad87f3de
-      internalID: -1904258314
+      spriteID: f9679ab71114a904f8d4ea2214efdcab
+      internalID: -887646768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_70
+      name: Toorb_78
       rect:
         serializedVersion: 2
         x: 64
@@ -1581,14 +1749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d4ebb4cdecb4a54d9140ab222d5380b
-      internalID: 598253427
+      spriteID: 687231d5792bf9049b38f00d5a13be5e
+      internalID: -1991843543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_71
+      name: Toorb_79
       rect:
         serializedVersion: 2
         x: 96
@@ -1602,14 +1770,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7b00a599200f7e48bcbd17b5052ad1d
-      internalID: 1069758074
+      spriteID: 2c11568fadb232e46be2d1a52b17d31a
+      internalID: -1708494964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_72
+      name: Toorb_80
       rect:
         serializedVersion: 2
         x: 0
@@ -1623,14 +1791,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 980b9d4ea1ecb914bbf0a72302187865
-      internalID: -1399023208
+      spriteID: 328b3ab0fa3e95844b730a1f528a393e
+      internalID: 40268649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_73
+      name: Toorb_81
       rect:
         serializedVersion: 2
         x: 32
@@ -1644,14 +1812,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4267cac1437e0144aa41e6278c2f8e7a
-      internalID: -120363894
+      spriteID: e802952b549666c4785e30017c3f0dba
+      internalID: 1825260375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_74
+      name: Toorb_82
       rect:
         serializedVersion: 2
         x: 64
@@ -1665,14 +1833,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15fbd1994a354c94985074da6859ee5b
-      internalID: -948671878
+      spriteID: b5103d9446e114e4fab956a10b278cb5
+      internalID: -559308960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cyclodrill_75
+      name: Toorb_83
       rect:
         serializedVersion: 2
         x: 96
@@ -1686,8 +1854,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96b2aafc4279339499dc0bb3fce86045
-      internalID: 1790288667
+      spriteID: 42b1a647dbe95bf4abe7bbfc483e15fb
+      internalID: -185338969
       vertices: []
       indices: 
       edges: []
@@ -1703,82 +1871,90 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cyclodrill_0: 1079194434
-      Cyclodrill_1: 1664136784
-      Cyclodrill_10: -1105615014
-      Cyclodrill_11: 967454192
-      Cyclodrill_12: 544558319
-      Cyclodrill_13: -1629657976
-      Cyclodrill_14: -181458040
-      Cyclodrill_15: -1185868214
-      Cyclodrill_16: -1842580808
-      Cyclodrill_17: -1838831147
-      Cyclodrill_18: -1973771842
-      Cyclodrill_19: -580601211
-      Cyclodrill_2: -248718180
-      Cyclodrill_20: 34462299
-      Cyclodrill_21: 1030447185
-      Cyclodrill_22: 1446973232
-      Cyclodrill_23: 440121781
-      Cyclodrill_24: 1447251929
-      Cyclodrill_25: 214346621
-      Cyclodrill_26: 1493311007
-      Cyclodrill_27: 68777406
-      Cyclodrill_28: 821669842
-      Cyclodrill_29: -1521487772
-      Cyclodrill_3: -1208341534
-      Cyclodrill_30: 1954284824
-      Cyclodrill_31: 824891191
-      Cyclodrill_32: -2131716008
-      Cyclodrill_33: -1051052633
-      Cyclodrill_34: 48239021
-      Cyclodrill_35: -307181351
-      Cyclodrill_36: 2086585578
-      Cyclodrill_37: -1588641938
-      Cyclodrill_38: 1835993642
-      Cyclodrill_39: -199592915
-      Cyclodrill_4: -1217765018
-      Cyclodrill_40: -174083384
-      Cyclodrill_41: 1315037509
-      Cyclodrill_42: 2127292734
-      Cyclodrill_43: -1716728438
-      Cyclodrill_44: -626950362
-      Cyclodrill_45: -1571002062
-      Cyclodrill_46: 571846584
-      Cyclodrill_47: -2128489319
-      Cyclodrill_48: 314765027
-      Cyclodrill_49: -1190893851
-      Cyclodrill_5: -1630872073
-      Cyclodrill_50: -1199578694
-      Cyclodrill_51: 1133523541
-      Cyclodrill_52: 1376223405
-      Cyclodrill_53: -1879640852
-      Cyclodrill_54: -625408253
-      Cyclodrill_55: -1163967806
-      Cyclodrill_56: -2000638456
-      Cyclodrill_57: 2093659639
-      Cyclodrill_58: 2108120158
-      Cyclodrill_59: 807041092
-      Cyclodrill_6: -810041615
-      Cyclodrill_60: -2053127692
-      Cyclodrill_61: -1721727330
-      Cyclodrill_62: -1833051824
-      Cyclodrill_63: -1405910333
-      Cyclodrill_64: 1444292385
-      Cyclodrill_65: 1308620532
-      Cyclodrill_66: -1092047052
-      Cyclodrill_67: -64651316
-      Cyclodrill_68: 2121573788
-      Cyclodrill_69: -1904258314
-      Cyclodrill_7: 719481520
-      Cyclodrill_70: 598253427
-      Cyclodrill_71: 1069758074
-      Cyclodrill_72: -1399023208
-      Cyclodrill_73: -120363894
-      Cyclodrill_74: -948671878
-      Cyclodrill_75: 1790288667
-      Cyclodrill_8: 2025605911
-      Cyclodrill_9: 986427314
+      Toorb_0: 459586775
+      Toorb_1: 1935717155
+      Toorb_10: 714807555
+      Toorb_11: -1135899107
+      Toorb_12: -1186837998
+      Toorb_13: -767232861
+      Toorb_14: 1672737147
+      Toorb_15: 694971865
+      Toorb_16: 1179938560
+      Toorb_17: -1091093514
+      Toorb_18: -2021677490
+      Toorb_19: 1769180203
+      Toorb_2: -1533130438
+      Toorb_20: -1164114250
+      Toorb_21: -797189062
+      Toorb_22: 384810628
+      Toorb_23: 1387744847
+      Toorb_24: -1062046144
+      Toorb_25: 1501440418
+      Toorb_26: 563318154
+      Toorb_27: 77969429
+      Toorb_28: -86529534
+      Toorb_29: -1842171013
+      Toorb_3: 871902131
+      Toorb_30: -662549658
+      Toorb_31: 1552649915
+      Toorb_32: -1096065409
+      Toorb_33: -736365027
+      Toorb_34: 234570007
+      Toorb_35: -825629101
+      Toorb_36: 996679176
+      Toorb_37: -1559693192
+      Toorb_38: 372868284
+      Toorb_39: -18275453
+      Toorb_4: -1272944318
+      Toorb_40: -359135041
+      Toorb_41: 380959879
+      Toorb_42: -1432325640
+      Toorb_43: 1819662525
+      Toorb_44: 677202873
+      Toorb_45: -1358424231
+      Toorb_46: 93107976
+      Toorb_47: -1153561293
+      Toorb_48: 1206001286
+      Toorb_49: 574334018
+      Toorb_5: -465877585
+      Toorb_50: -1204805461
+      Toorb_51: 1156637122
+      Toorb_52: 405656013
+      Toorb_53: -794051199
+      Toorb_54: -1611507168
+      Toorb_55: 1836208797
+      Toorb_56: 1179873592
+      Toorb_57: -763877370
+      Toorb_58: -240382528
+      Toorb_59: 1100761046
+      Toorb_6: 1976510220
+      Toorb_60: 1625169227
+      Toorb_61: -922560238
+      Toorb_62: 150870354
+      Toorb_63: -1919069802
+      Toorb_64: -883016575
+      Toorb_65: -1684869343
+      Toorb_66: 932457332
+      Toorb_67: 1286954094
+      Toorb_68: 266171087
+      Toorb_69: 776096406
+      Toorb_7: -1725006766
+      Toorb_70: 744627263
+      Toorb_71: 1161863609
+      Toorb_72: 1692111028
+      Toorb_73: -272829720
+      Toorb_74: 1973557026
+      Toorb_75: -1421123040
+      Toorb_76: 406595851
+      Toorb_77: -887646768
+      Toorb_78: -1991843543
+      Toorb_79: -1708494964
+      Toorb_8: -221648318
+      Toorb_80: 40268649
+      Toorb_81: 1825260375
+      Toorb_82: -559308960
+      Toorb_83: -185338969
+      Toorb_9: 1796561322
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
