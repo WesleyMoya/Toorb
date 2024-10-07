@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 539861fda7b1c0c43a76c3a0120e408e
+guid: 4d0a293c67a54884c98ef3718089168f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 192
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,22 +97,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Toorb_0
+      name: Toorb_idle
       rect:
         serializedVersion: 2
         x: 0
-        y: 2158
-        width: 192
-        height: 192
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3236ff6074909284d81c1bc34834ae0c
-      internalID: 837990445
+      spriteID: 610282fb91a463c439464400768becc4
+      internalID: -1219971633
       vertices: []
       indices: 
       edges: []
@@ -121,19 +121,19 @@ TextureImporter:
       name: Toorb_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 2158
-        width: 192
-        height: 192
+        x: 32
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aab8a7336e267947bd40a2256e6a044
-      internalID: -1894937943
+      spriteID: c34204fcea438b241b888c64d0b261fa
+      internalID: 1346850946
       vertices: []
       indices: 
       edges: []
@@ -142,19 +142,19 @@ TextureImporter:
       name: Toorb_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 2158
-        width: 192
-        height: 192
+        x: 64
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3768621528c71cf4abceea11a6a69963
-      internalID: -1655737339
+      spriteID: f876f626c1bbc954bb2c9a287f83a3a4
+      internalID: 619029439
       vertices: []
       indices: 
       edges: []
@@ -163,19 +163,19 @@ TextureImporter:
       name: Toorb_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 2158
-        width: 192
-        height: 192
+        x: 96
+        y: 224
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 557628af2d36e2a46bdb8fb1f7b9cb30
-      internalID: -1241644766
+      spriteID: 5c96eb6de05ebfe4a9ef5221faa1c1e4
+      internalID: 2128397994
       vertices: []
       indices: 
       edges: []
@@ -185,18 +185,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1966
-        width: 192
-        height: 192
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c565764e0334042a4a36e3d61f1119
-      internalID: -847221646
+      spriteID: e9400f7a4789ebd4f9326df9cdcccb7b
+      internalID: -698288883
       vertices: []
       indices: 
       edges: []
@@ -205,19 +205,19 @@ TextureImporter:
       name: Toorb_5
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1966
-        width: 192
-        height: 192
+        x: 32
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 167ba08ab53e9f0438f66eba3733770a
-      internalID: 263506922
+      spriteID: ef9c612a3f7df344698065923ee23ba4
+      internalID: 374328632
       vertices: []
       indices: 
       edges: []
@@ -226,19 +226,19 @@ TextureImporter:
       name: Toorb_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1966
-        width: 192
-        height: 192
+        x: 64
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b81e7d7d454012c4792a6517103f8dea
-      internalID: -1071089047
+      spriteID: 7a408580f27341f47995b31b0da0b1cb
+      internalID: -1291807129
       vertices: []
       indices: 
       edges: []
@@ -247,19 +247,19 @@ TextureImporter:
       name: Toorb_7
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1966
-        width: 192
-        height: 192
+        x: 96
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 397b3709f1c981b498db4a336e1b792a
-      internalID: 1680666923
+      spriteID: 22d92e83d2546704f99dd06cc4c1844a
+      internalID: -2027873688
       vertices: []
       indices: 
       edges: []
@@ -269,18 +269,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1774
-        width: 192
-        height: 192
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9754adbfaa681de42bbc593e317ec592
-      internalID: 1275701422
+      spriteID: 563c8dfca785d3d4fb01c37b4baf5cf6
+      internalID: 1963053332
       vertices: []
       indices: 
       edges: []
@@ -289,19 +289,19 @@ TextureImporter:
       name: Toorb_9
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1774
-        width: 192
-        height: 192
+        x: 32
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f27fef5c55486940ac30c7af395916f
-      internalID: -1346076566
+      spriteID: 6c6c4a826165fe54aa28cdeeef9514d2
+      internalID: -2082777708
       vertices: []
       indices: 
       edges: []
@@ -310,19 +310,19 @@ TextureImporter:
       name: Toorb_10
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1774
-        width: 192
-        height: 192
+        x: 64
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 152a95122d8cea54796ecbaccdbd2ab7
-      internalID: -34572840
+      spriteID: e928c79efb5826a4baaceb7e300858d5
+      internalID: -1763484939
       vertices: []
       indices: 
       edges: []
@@ -331,19 +331,19 @@ TextureImporter:
       name: Toorb_11
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1774
-        width: 192
-        height: 192
+        x: 96
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8ab27cacd5757742a3acf1825488d4a
-      internalID: 805603267
+      spriteID: 7ca350d33f160ad46a975208f94d1675
+      internalID: -1184618871
       vertices: []
       indices: 
       edges: []
@@ -353,18 +353,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1582
-        width: 192
-        height: 192
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af1c8fc60c4600e429180cd6ba926deb
-      internalID: -1568313133
+      spriteID: 9d5e7b9ea4e8f1c4c867f340abb792ae
+      internalID: 1253952633
       vertices: []
       indices: 
       edges: []
@@ -373,19 +373,19 @@ TextureImporter:
       name: Toorb_13
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1582
-        width: 192
-        height: 192
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11bdda1683b03bd498a938d57a358462
-      internalID: 1325996463
+      spriteID: 39fb6d8b101343c428030593a8acf293
+      internalID: -1186700218
       vertices: []
       indices: 
       edges: []
@@ -394,19 +394,19 @@ TextureImporter:
       name: Toorb_14
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1582
-        width: 192
-        height: 192
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7e24c180313c024b88d5e9ef08578b0
-      internalID: 879707559
+      spriteID: 14a97a866146f5046a6701e03229ed72
+      internalID: 115406150
       vertices: []
       indices: 
       edges: []
@@ -415,19 +415,19 @@ TextureImporter:
       name: Toorb_15
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1582
-        width: 192
-        height: 192
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a610354b956a1754e8a23fbea39f75b3
-      internalID: 1538181255
+      spriteID: e71b1d18d4872a74cba84dc032037aa8
+      internalID: -1630053036
       vertices: []
       indices: 
       edges: []
@@ -437,18 +437,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1390
-        width: 192
-        height: 192
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1b39087519b31446bc37a164660ce2e
-      internalID: 1089275305
+      spriteID: 5db86da4cc7938744a44d3b78d14a1eb
+      internalID: 153280097
       vertices: []
       indices: 
       edges: []
@@ -457,19 +457,19 @@ TextureImporter:
       name: Toorb_17
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1390
-        width: 192
-        height: 192
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9599f99dc87c21c4c9e6bed880267633
-      internalID: -166989475
+      spriteID: 9732b369a83396241aa6161f45a8c666
+      internalID: 767804174
       vertices: []
       indices: 
       edges: []
@@ -478,19 +478,19 @@ TextureImporter:
       name: Toorb_18
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1390
-        width: 192
-        height: 192
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27ebc86e45673214db0b18fa561f7f60
-      internalID: 63337370
+      spriteID: 2c336b3cf048a4d49b3031f0f5e43ddd
+      internalID: 680221591
       vertices: []
       indices: 
       edges: []
@@ -499,19 +499,19 @@ TextureImporter:
       name: Toorb_19
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1390
-        width: 192
-        height: 192
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd586538a5050634db98a65dede9caad
-      internalID: 1085895852
+      spriteID: b20247ae83aa16e4aa8f923769f30040
+      internalID: -1854007909
       vertices: []
       indices: 
       edges: []
@@ -521,18 +521,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1198
-        width: 192
-        height: 192
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2bcc59af41a47f4ba9cd1e01cf40b10
-      internalID: -1333880050
+      spriteID: e4006038bc9949d4d8ccebc0fb54f57a
+      internalID: 1135689659
       vertices: []
       indices: 
       edges: []
@@ -541,19 +541,19 @@ TextureImporter:
       name: Toorb_21
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1198
-        width: 192
-        height: 192
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc11b3f394a34b24ab875a6242427576
-      internalID: 720680896
+      spriteID: cdbc41cff920b5d45a302e7eba03090b
+      internalID: 1119190305
       vertices: []
       indices: 
       edges: []
@@ -562,19 +562,19 @@ TextureImporter:
       name: Toorb_22
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1198
-        width: 192
-        height: 192
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe4fa09c7decaf84fa8f7dfeb973abe0
-      internalID: 1647500500
+      spriteID: fed77f48fa05c4a4485cdc3e7232db53
+      internalID: -1967396321
       vertices: []
       indices: 
       edges: []
@@ -583,19 +583,19 @@ TextureImporter:
       name: Toorb_23
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1198
-        width: 192
-        height: 192
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0147d6a3ee0d1c42a587025d585ef3c
-      internalID: -350013379
+      spriteID: 9270ce2146c6efe41942b7e686e60188
+      internalID: -1752748
       vertices: []
       indices: 
       edges: []
@@ -605,18 +605,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1006
-        width: 192
-        height: 192
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46454c3a1c23cb2488bc5571448eb60f
-      internalID: -1039507263
+      spriteID: c7c8130ce1fe81042bf681982d8869eb
+      internalID: 2091554922
       vertices: []
       indices: 
       edges: []
@@ -625,19 +625,19 @@ TextureImporter:
       name: Toorb_25
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1006
-        width: 192
-        height: 192
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 778d5b52deb590a4eabfa59ddd06efdb
-      internalID: 346563677
+      spriteID: 5ba0053ae82baf44a996a8ab019613aa
+      internalID: -685549947
       vertices: []
       indices: 
       edges: []
@@ -646,19 +646,19 @@ TextureImporter:
       name: Toorb_26
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1006
-        width: 192
-        height: 192
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09e1386035d32a54e9995d98b3b4fdf1
-      internalID: -1558760866
+      spriteID: 9d7f06e09315cca4e9cb3a9e8cbbeb39
+      internalID: -1158194398
       vertices: []
       indices: 
       edges: []
@@ -667,19 +667,19 @@ TextureImporter:
       name: Toorb_27
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1006
-        width: 192
-        height: 192
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b17b42342712ec445aa5a146430c6170
-      internalID: -468678456
+      spriteID: 50fd891350677644ab9ca7eb024ea7b4
+      internalID: 1777784534
       vertices: []
       indices: 
       edges: []
@@ -689,18 +689,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 814
-        width: 192
-        height: 192
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78b2f4269f9d5314dac286930fb1b7de
-      internalID: -339984933
+      spriteID: a29dc4ce42eea094f9e2874f714792e7
+      internalID: 2039448330
       vertices: []
       indices: 
       edges: []
@@ -709,19 +709,19 @@ TextureImporter:
       name: Toorb_29
       rect:
         serializedVersion: 2
-        x: 192
-        y: 814
-        width: 192
-        height: 192
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ba2f06c43a998f44b6c4a35e117be34
-      internalID: 1092593737
+      spriteID: d4ead3d665ddede42984f9ac3e59a9b1
+      internalID: 284937678
       vertices: []
       indices: 
       edges: []
@@ -730,19 +730,19 @@ TextureImporter:
       name: Toorb_30
       rect:
         serializedVersion: 2
-        x: 384
-        y: 814
-        width: 192
-        height: 192
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a47bb7c932575b4c83f18ff41e87760
-      internalID: 1502566319
+      spriteID: 7c7a23d0e80dbe1468b96209452fc98c
+      internalID: -1559070209
       vertices: []
       indices: 
       edges: []
@@ -751,19 +751,19 @@ TextureImporter:
       name: Toorb_31
       rect:
         serializedVersion: 2
-        x: 576
-        y: 814
-        width: 192
-        height: 192
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4f2cb878f9da52469e93b573f772228
-      internalID: 1574787411
+      spriteID: cc8e663883f0da841869cee5f5aded4d
+      internalID: 1037969742
       vertices: []
       indices: 
       edges: []
@@ -779,38 +779,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Toorb_0: 837990445
-      Toorb_1: -1894937943
-      Toorb_10: -34572840
-      Toorb_11: 805603267
-      Toorb_12: -1568313133
-      Toorb_13: 1325996463
-      Toorb_14: 879707559
-      Toorb_15: 1538181255
-      Toorb_16: 1089275305
-      Toorb_17: -166989475
-      Toorb_18: 63337370
-      Toorb_19: 1085895852
-      Toorb_2: -1655737339
-      Toorb_20: -1333880050
-      Toorb_21: 720680896
-      Toorb_22: 1647500500
-      Toorb_23: -350013379
-      Toorb_24: -1039507263
-      Toorb_25: 346563677
-      Toorb_26: -1558760866
-      Toorb_27: -468678456
-      Toorb_28: -339984933
-      Toorb_29: 1092593737
-      Toorb_3: -1241644766
-      Toorb_30: 1502566319
-      Toorb_31: 1574787411
-      Toorb_4: -847221646
-      Toorb_5: 263506922
-      Toorb_6: -1071089047
-      Toorb_7: 1680666923
-      Toorb_8: 1275701422
-      Toorb_9: -1346076566
+      Toorb_1: 1346850946
+      Toorb_10: -1763484939
+      Toorb_11: -1184618871
+      Toorb_12: 1253952633
+      Toorb_13: -1186700218
+      Toorb_14: 115406150
+      Toorb_15: -1630053036
+      Toorb_16: 153280097
+      Toorb_17: 767804174
+      Toorb_18: 680221591
+      Toorb_19: -1854007909
+      Toorb_2: 619029439
+      Toorb_20: 1135689659
+      Toorb_21: 1119190305
+      Toorb_22: -1967396321
+      Toorb_23: -1752748
+      Toorb_24: 2091554922
+      Toorb_25: -685549947
+      Toorb_26: -1158194398
+      Toorb_27: 1777784534
+      Toorb_28: 2039448330
+      Toorb_29: 284937678
+      Toorb_3: 2128397994
+      Toorb_30: -1559070209
+      Toorb_31: 1037969742
+      Toorb_4: -698288883
+      Toorb_5: 374328632
+      Toorb_6: -1291807129
+      Toorb_7: -2027873688
+      Toorb_8: 1963053332
+      Toorb_9: -2082777708
+      Toorb_idle: -1219971633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

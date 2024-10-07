@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class CollectibleMaterial : MonoBehaviour, IInteractable
 {
-       public enum MaterialType { Plastic, Metal, Wood }
+    public enum MaterialType { Plastic, Metal, Wood }
     public enum Size { Mini, Medium, Big }
 
-    [SerializeField] private MaterialType materialType; // Tipo de material
-    [SerializeField] private Size size; // Tamanho do material
-    [SerializeField] private int value; // Valor do material
+    [SerializeField] private MaterialType materialType;
+    [SerializeField] private Size size;
+    [SerializeField] private int value;
 
-    private Animator animator; // Referência ao Animator
-
+    private Animator animator;
+    private InventoryManager inventoryManager;
+    
     private void Start()
     {
         animator = GetComponent<Animator>(); // Obtém o componente Animator
+        inventoryManager = FindObjectOfType<InventoryManager>();  // Procura automaticamente o InventoryManager na cena
+
     }
 
     public void Interact()
     {
         // Desativa o collider
         GetComponent<BoxCollider2D>().enabled = false;
+
         // Toca a animação de desaparecimento com o trigger específico
         string animationTrigger = GetAnimationTrigger();
         animator.SetTrigger(animationTrigger);
@@ -30,7 +34,14 @@ public class CollectibleMaterial : MonoBehaviour, IInteractable
         StartCoroutine(DestroyAfterAnimation());
         
         // Adiciona o valor ao inventário do jogador
-        //GameManager.instance.AddMaterial(materialType, value);
+        if (inventoryManager != null)
+        {
+            inventoryManager.AddMaterial(materialType, value);
+        }
+        else
+        {
+            Debug.LogError("InventoryManager não atribuído!");
+        }
     }
 
     private string GetAnimationTrigger()
@@ -48,6 +59,4 @@ public class CollectibleMaterial : MonoBehaviour, IInteractable
         // Destrói o objeto
         Destroy(gameObject);
     }
-
-
 }

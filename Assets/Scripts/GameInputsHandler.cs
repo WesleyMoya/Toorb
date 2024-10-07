@@ -9,7 +9,7 @@ public class GameInputsHandler : MonoBehaviour
     [SerializeField] private GameObject gameHUD; 
     [SerializeField] private GameObject inventoryUI; 
     [SerializeField] private GameObject mapUI;
-    //[SerializeField] private GameObject healthUI; GameObject pauseMenuUI;   // Referência ao painel do menu de pausa
+    [SerializeField] private GameObject pauseMenu;
 
     private bool isInventoryOpen = false;
     private bool isMapOpen = false;
