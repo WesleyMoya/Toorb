@@ -9,6 +9,11 @@ public class InventoryManager : MonoBehaviour
     public int metalQnt = 0;
     public int woodQnt = 0;
 
+    // Limites máximos de cada material
+    public int maxPlastic = 100;
+    public int maxMetal = 100;
+    public int maxWood = 100;
+
     [SerializeField] private TextMeshProUGUI plasticText;
     [SerializeField] private TextMeshProUGUI metalText;
     [SerializeField] private TextMeshProUGUI woodText;
@@ -19,31 +24,77 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Função para adicionar material ao inventário
-    public void AddMaterial(CollectibleMaterial.MaterialType materialType, int value)
+    public bool AddMaterial(CollectibleMaterial.MaterialType materialType, int value)
     {
+        bool added = false;
+
         switch (materialType)
         {
             case CollectibleMaterial.MaterialType.Plastic:
-                plasticQnt += value;
-                Debug.Log("Plastic adicionado: " + value + ". Total: " + plasticQnt);
+                if (plasticQnt + value <= maxPlastic)
+                {
+                    plasticQnt += value;
+                    added = true;
+                    Debug.Log("Plastic adicionado: " + value + ". Total: " + plasticQnt);
+                }
+                else
+                {
+                    Debug.Log("Inventário de plástico cheio!");
+                }
                 break;
+
             case CollectibleMaterial.MaterialType.Metal:
-                metalQnt += value;
-                Debug.Log("Metal adicionado: " + value + ". Total: " + metalQnt);
+                if (metalQnt + value <= maxMetal)
+                {
+                    metalQnt += value;
+                    added = true;
+                    Debug.Log("Metal adicionado: " + value + ". Total: " + metalQnt);
+                }
+                else
+                {
+                    Debug.Log("Inventário de metal cheio!");
+                }
                 break;
+
             case CollectibleMaterial.MaterialType.Wood:
-                woodQnt += value;
-                Debug.Log("Wood adicionado: " + value + ". Total: " + woodQnt);
+                if (woodQnt + value <= maxWood)
+                {
+                    woodQnt += value;
+                    added = true;
+                    Debug.Log("Wood adicionado: " + value + ". Total: " + woodQnt);
+                }
+                else
+                {
+                    Debug.Log("Inventário de madeira cheio!");
+                }
                 break;
         }
 
         UpdateUI();
+        return added; // Retorna true se o material foi adicionado, false se não foi
     }
 
     private void UpdateUI()
     {
-        plasticText.text = "Plastic: " + plasticQnt.ToString();
-        metalText.text = "Metal: " + metalQnt.ToString();
-        woodText.text = "Wood: " + woodQnt.ToString();
+        // Mostra a quantidade atual e o limite máximo de cada material
+        plasticText.text = "Plastic: " + plasticQnt.ToString() + "/" + maxPlastic.ToString();
+        metalText.text = "Metal: " + metalQnt.ToString() + "/" + maxMetal.ToString();
+        woodText.text = "Wood: " + woodQnt.ToString() + "/" + maxWood.ToString();
+    }
+
+    // Função para verificar se o material pode ser adicionado ao inventário
+    public bool CanAddMaterial(CollectibleMaterial.MaterialType materialType, int value)
+    {
+        switch (materialType)
+        {
+            case CollectibleMaterial.MaterialType.Plastic:
+                return plasticQnt + value <= maxPlastic;
+            case CollectibleMaterial.MaterialType.Metal:
+                return metalQnt + value <= maxMetal;
+            case CollectibleMaterial.MaterialType.Wood:
+                return woodQnt + value <= maxWood;
+            default:
+                return false;
+        }
     }
 }
