@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     private bool isAttacking = false;
 
+    public GameObject playerAttack; // GameObject que contém o BoxCollider2D para o ataque
+
     // Variáveis para priorizar o eixo do movimento
     private bool prioritizeX; // Armazena se o eixo X foi o primeiro pressionado
     private bool moving; // Armazena se o personagem está se movendo
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         prioritizeX = false; // Começa sem priorizar nenhum eixo
         moving = false; // Começa parado
+        playerAttack.SetActive(false); // Desativa o PlayerAttack inicialmente
     }
 
     void Update()
@@ -125,6 +128,24 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("AttackX", attackDirection.x);
         anim.SetFloat("AttackY", attackDirection.y);
 
+        // Ativa o PlayerAttack para o alcance do ataque
+        playerAttack.SetActive(true);
+
+        // Ajusta a posição do PlayerAttack de acordo com a direção do ataque
+        playerAttack.transform.localPosition = attackDirection * 0.5f; // Ajusta a distância para o alcance do ataque
+
+        // Ajusta o tamanho do collider baseado na direção do ataque
+        if (Mathf.Abs(attackDirection.x) > Mathf.Abs(attackDirection.y))
+        {
+            // Ataque na horizontal, ajuste o BoxCollider para ser mais largo e menos alto
+            playerAttack.GetComponent<BoxCollider2D>().size = new Vector2(1.5f, 0.5f);
+        }
+        else
+        {
+            // Ataque na vertical, ajuste o BoxCollider para ser mais alto e menos largo
+            playerAttack.GetComponent<BoxCollider2D>().size = new Vector2(0.5f, 1.5f);
+        }
+
         isAttacking = true;
         anim.SetTrigger("Attack");
 
@@ -137,5 +158,6 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f); // Ajuste para o tempo da animação
         isAttacking = false;
+        playerAttack.SetActive(false); // Desativa o collider após o ataque
     }
 }

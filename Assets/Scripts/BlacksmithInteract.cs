@@ -5,6 +5,7 @@ public class Blacksmith : MonoBehaviour, IInteractable
     [SerializeField] private Sprite npcIcon;
     [SerializeField] private string npcName = "Ferreiro";
     [SerializeField] private string dialogContent = "Bem-vindo ao ferreiro! O que você gostaria de fazer?";
+    [SerializeField] private GameObject blacksmithMenu; // Menu específico do ferreiro
     
     private DialogManager dialogManager;
 
@@ -17,7 +18,7 @@ public class Blacksmith : MonoBehaviour, IInteractable
     {
         if (dialogManager != null)
         {
-            dialogManager.StartDialog(npcIcon, npcName, dialogContent); // Inicia o diálogo
+            dialogManager.StartDialog(npcIcon, npcName, dialogContent, blacksmithMenu); // Inicia o diálogo com o menu do ferreiro
         }
     }
 }

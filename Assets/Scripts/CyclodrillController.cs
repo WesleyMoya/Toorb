@@ -9,11 +9,13 @@ public class CyclodrillController : MonoBehaviour
     public EnemyDetection detectionArea;
     private Rigidbody2D rb;
     private Vector2 movement;
+    public Enemy enemy; // Referência ao componente de atributos do enemy
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        enemy = GetComponent<Enemy>(); // Obtém o componente dos atributos do enemy no Start
     }
 
     private void FixedUpdate()
