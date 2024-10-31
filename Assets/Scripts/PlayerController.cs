@@ -20,17 +20,24 @@ public class PlayerController : MonoBehaviour
     private bool prioritizeX; // Armazena se o eixo X foi o primeiro pressionado
     private bool moving; // Armazena se o personagem está se movendo
 
+    // Referência ao GameInputsHandler
+    [SerializeField] private GameInputsHandler gameInputsHandler;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         prioritizeX = false; // Começa sem priorizar nenhum eixo
         moving = false; // Começa parado
         playerAttack.SetActive(false); // Desativa o PlayerAttack inicialmente
+
+        // Obtém a referência ao GameInputsHandler
+        gameInputsHandler = FindObjectOfType<GameInputsHandler>();
     }
 
     void Update()
     {
-        if (!isAttacking) // Só processa inputs de movimento se não estiver atacando
+        // Só processa inputs de movimento se não estiver atacando e se o movimento não estiver bloqueado
+        if (!isAttacking && !gameInputsHandler.isPlayerMovementLocked)
         {
             ProcessInputs();
         }
@@ -98,8 +105,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Só aplica movimento se não estiver atacando
-        if (!isAttacking)
+        // Só aplica movimento se não estiver atacando e se o movimento não estiver bloqueado
+        if (!isAttacking && !gameInputsHandler.isPlayerMovementLocked)
         {
             rb.velocity = movement * moveSpeed;
         }
