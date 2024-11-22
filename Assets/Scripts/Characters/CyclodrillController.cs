@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class CyclodrillController : MonoBehaviour
 {
@@ -27,9 +26,8 @@ public class CyclodrillController : MonoBehaviour
     {
         if (isAttacking)
         {
-            // Impede o movimento durante o ataque
             rb.velocity = Vector2.zero;
-            anim.SetBool("IsMoving", false); // Certifique-se de que IsMoving é false durante o ataque
+            anim.SetBool("IsMoving", false);
             return;
         }
 
@@ -40,28 +38,24 @@ public class CyclodrillController : MonoBehaviour
             Vector2 direction = targetPosition - (Vector2)transform.position;
             movement = direction.normalized;
 
-            // Checa a distância do inimigo ao jogador
             if (Vector2.Distance(transform.position, player.position) <= attackRange)
             {
-                // Tentar atacar se o cooldown tiver terminado
                 if (Time.time >= lastAttackTime + attackCooldown)
                 {
-                    StartCoroutine(Attack()); // Inicia a coroutine de ataque
-                    lastAttackTime = Time.time; // Atualiza o tempo do último ataque
+                    StartCoroutine(Attack(player)); // Passa o jogador como alvo
+                    lastAttackTime = Time.time;
                 }
 
-                rb.velocity = Vector2.zero; // Parar o movimento do inimigo ao atacar
-                anim.SetBool("IsMoving", false); // Parar animação de movimento
-                anim.SetBool("IsAttacking", true); // Atualiza para indicar que está atacando
+                rb.velocity = Vector2.zero;
+                anim.SetBool("IsMoving", false);
+                anim.SetBool("IsAttacking", true);
             }
             else
             {
-                // Movimento em direção ao jogador quando fora da distância de ataque
                 rb.MovePosition(rb.position + movement * Cyclodrill_moveSpeed * Time.fixedDeltaTime);
-                anim.SetBool("IsMoving", true); // Inicia animação de movimento
-                anim.SetBool("IsAttacking", false); // Certifique-se de que não está atacando
+                anim.SetBool("IsMoving", true);
+                anim.SetBool("IsAttacking", false);
 
-                // Atualiza a animação de direção
                 if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
                 {
                     anim.SetFloat("MoveX", movement.x);
@@ -73,31 +67,33 @@ public class CyclodrillController : MonoBehaviour
                     anim.SetFloat("MoveY", movement.y);
                 }
 
-                lastDirection = movement; // Atualiza última direção do movimento
+                lastDirection = movement;
             }
         }
         else
         {
             anim.SetBool("IsMoving", false);
-            anim.SetBool("IsAttacking", false); // Certifique-se de que não está atacando
+            anim.SetBool("IsAttacking", false);
             rb.velocity = Vector2.zero;
         }
     }
 
-    // Função para realizar o ataque
-    private IEnumerator Attack()
+    private IEnumerator Attack(Transform player)
     {
-        isAttacking = true; // Impede movimento durante o ataque
+        isAttacking = true;
 
-        // Define a direção do ataque com base na última direção do movimento
         anim.SetFloat("AttackX", lastDirection.x);
         anim.SetFloat("AttackY", lastDirection.y);
-        anim.SetTrigger("Attack"); // Inicia a animação de ataque
+        anim.SetTrigger("Attack");
 
-        // Aguarda a duração da animação de ataque
+        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+
+        // Toca a animação de Hit no inimigo com base na direção
+        enemy.PlayHitAnimation(directionToPlayer);
+
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
 
-        isAttacking = false; // Permite movimento novamente após o ataque
-        anim.SetBool("IsAttacking", false); // Certifique-se de que não está atacando
+        isAttacking = false;
+        anim.SetBool("IsAttacking", false);
     }
 }

@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+
 
 public class Enemy : MonoBehaviour
 {
@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount; // Reduz a vida pelo valor do dano recebido
-        Debug.Log("Vida restante do inimigo: " + currentHealth);
 
         // Toca a animação de dano
         anim.SetTrigger("Hit");
@@ -30,11 +29,18 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // Nova função: Toca a animação de Hit com base na direção
+    public void PlayHitAnimation(Vector2 direction)
+    {
+        anim.SetFloat("HitX", direction.x);
+        anim.SetFloat("HitY", direction.y);
+        anim.SetTrigger("Hit"); // Dispara a animação de hit
+    }
+
     // Método chamado quando a vida chega a 0
     void Die()
     {
         Debug.Log("Inimigo destruído!");
-        anim.SetTrigger("Die");  // Toca a animação de morte (se houver)
         GetComponent<Collider2D>().enabled = false; // Desativa o collider para impedir novas interações
 
         // Espera um tempo para a animação de morte e destrói o objeto
