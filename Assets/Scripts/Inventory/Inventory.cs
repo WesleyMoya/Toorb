@@ -13,6 +13,9 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Item[] items;
     [SerializeField] private Button giveItemBtn;
 
+    public PlayerAttack playerAtk;
+    public PlayerHealthManager playerHlt;
+
     private void Awake()
     {
         Singleton = this;
@@ -61,11 +64,25 @@ public class Inventory : MonoBehaviour
         switch (tag)
         {
             case SlotTag.Damage:
-                Debug.Log(item == null ? "Removeu um item de Damage." : "Equipou um item de Damage.");
+                if (item == null)
+                {
+                    Debug.Log("Removeu Item tag Damage");
+                }
+                else
+                {
+                    Debug.Log("Equipou Item tag Damage");
+                }
                 break;
 
             case SlotTag.Equipment:
-                Debug.Log(item == null ? "Removeu um item de Equipment." : "Equipou um item de Equipment.");
+                if (item == null)
+                {
+                    Debug.Log("Removeu Item tag Equipment");
+                }
+                else
+                {
+                    Debug.Log("Equipou Item tag Equipment");
+                }
                 break;
 
             default:
