@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public enum SlotTag { Damage, Decoration, Equipment, None }
+
+[CreateAssetMenu(menuName = "Item Creator/Item")]
+public class Item : ScriptableObject
 {
-    public string itemName; // Nome do item
-    public Sprite itemIcon; // Ícone do item
+    public SlotTag itemTag;
+    public Sprite sprite;
 }
