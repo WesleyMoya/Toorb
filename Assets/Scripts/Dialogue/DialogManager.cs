@@ -9,13 +9,16 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogContent;
     [SerializeField] private GameObject dialogPanel;
     [SerializeField] private GameObject hud;
-    
+
     [SerializeField] private Button closeButton; // Botão para fechar o diálogo
     [SerializeField] private Button menuButton; // Botão para abrir o menu coringa
     private GameObject npcMenu; // Menu específico do NPC
 
+    [SerializeField] private GameInputsHandler gameInputsHandler;
+
     private void Start()
     {
+        gameInputsHandler = FindObjectOfType<GameInputsHandler>();
         dialogPanel.SetActive(false);
 
         // Associa os botões às funções
@@ -26,6 +29,7 @@ public class DialogManager : MonoBehaviour
     // Método para iniciar o diálogo com os parâmetros
     public void StartDialog(Sprite icon, string name, string content, GameObject npcSpecificMenu)
     {
+        gameInputsHandler.isPlayerMovementLocked = true;
         npcIcon.sprite = icon;
         npcName.text = name;
         dialogContent.text = content;
@@ -38,6 +42,8 @@ public class DialogManager : MonoBehaviour
     // Método para fechar o diálogo
     public void CloseDialog()
     {
+        gameInputsHandler.isPlayerMovementLocked = false;
+        npcMenu.SetActive(false);
         dialogPanel.SetActive(false);
         hud.SetActive(true);
     }
@@ -49,10 +55,6 @@ public class DialogManager : MonoBehaviour
         {
             npcMenu.SetActive(true); // Ativa o menu específico do NPC
             dialogPanel.SetActive(false); // Fecha a caixa de diálogo quando o menu é aberto
-        }
-        else
-        {
-            Debug.LogWarning("Nenhum menu específico para este NPC.");
         }
     }
 }

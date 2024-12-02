@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using TMPro;
 
 public class LoadingManager : MonoBehaviour
@@ -19,21 +18,27 @@ public class LoadingManager : MonoBehaviour
 
     private IEnumerator LoadSceneAsync(string sceneName)
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        // Exibir o texto de loading por 5 segundos
+        yield return new WaitForSeconds(5f);
 
-        // Enquanto carrega, atualiza a contagem de pontos
+        // Atualiza o texto de carregamento com os pontos
+        while (dotCount < 3) // Exibe o texto de loading por um tempo
+        {
+            UpdateLoadingText();
+            yield return null;
+        }
+
+        // Carregar a cena do jogo (Jogo1)
+        AsyncOperation operation = SceneManager.LoadSceneAsync("Jogo1");
         while (!operation.isDone)
         {
-            // Atualiza o texto de carregamento com os pontos
-            UpdateLoadingText();
-
+            // Aguardar o carregamento da cena
             yield return null;
         }
     }
 
     private void Update()
     {
-        // Atualiza o temporizador de troca dos pontos
         if (loadingText != null)
         {
             dotTimer += Time.deltaTime;

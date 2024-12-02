@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         Animate();
 
         // Detecta o input de ataque com o clique do mouse
-        if (Input.GetMouseButtonDown(0) && !isAttacking) // Clique esquerdo do mouse para atacar
+        if (Input.GetMouseButtonDown(0) && !isAttacking && !gameInputsHandler.isPlayerMovementLocked) // Clique esquerdo do mouse para atacar
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Attack(); // Chama o ataque sem parâmetros, usando a direção da última movimentação
@@ -124,7 +124,8 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
-        if (isAttacking) return;
+        // Não permite atacar se o movimento está bloqueado ou se já está atacando
+        if (isAttacking || gameInputsHandler.isPlayerMovementLocked) return;
 
         // Define os parâmetros do Blend Tree para ataque
         anim.SetFloat("AttackX", lastMoveDirection.x);

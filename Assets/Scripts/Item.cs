@@ -8,4 +8,6 @@ public class Item : ScriptableObject
     public SlotTag itemTag;
     public Sprite sprite;
     public string itemName;
+    public int defense;
+    public int damage;
 }

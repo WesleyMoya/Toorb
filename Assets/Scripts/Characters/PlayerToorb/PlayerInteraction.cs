@@ -9,15 +9,23 @@ public class PlayerInteraction : MonoBehaviour
     private bool isPlayerInRange = false;
     private GameObject currentInteractableObject; // Armazena o objeto atual com o qual o player pode interagir
 
+    [SerializeField] private GameInputsHandler gameInputsHandler; // Referência para verificar o estado do bloqueio de movimento
+
     void Start()
     {
         interactionIcon.SetActive(false);
+
+        // Obtém a referência ao GameInputsHandler se não foi atribuída no Inspector
+        if (gameInputsHandler == null)
+        {
+            gameInputsHandler = FindObjectOfType<GameInputsHandler>();
+        }
     }
 
     void Update()
     {
         // Verifica se o jogador está no alcance de algum objeto e se a tecla de interação foi pressionada
-        if (isPlayerInRange && Input.GetKeyDown(interactionKey) && currentInteractableObject != null)
+        if (!gameInputsHandler.isPlayerMovementLocked && isPlayerInRange && Input.GetKeyDown(interactionKey) && currentInteractableObject != null)
         {
             currentInteractableObject.GetComponent<IInteractable>().Interact();
         }
@@ -32,7 +40,8 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Interactable"))
+        // Verifica se o movimento não está bloqueado antes de ativar o ícone de interação
+        if (!gameInputsHandler.isPlayerMovementLocked && collision.CompareTag("Interactable"))
         {
             currentInteractableObject = collision.gameObject;
             interactionIcon.SetActive(true);
@@ -44,7 +53,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (collision.CompareTag("Interactable"))
         {
-            interactionIcon.SetActive(false); 
+            interactionIcon.SetActive(false);
             isPlayerInRange = false;
             currentInteractableObject = null;
         }
