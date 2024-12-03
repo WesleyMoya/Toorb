@@ -5,60 +5,50 @@ using TMPro;
 
 public class LoadingManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI loadingText; // Usando TextMeshProUGUI em vez de Text
+    [SerializeField] private TextMeshProUGUI loadingText; // Usando TextMeshProUGUI
     private string baseText = "Loading"; // Texto fixo
     private int dotCount = 0; // Contador para os pontos
-    private float dotTimer = 0f; // Timer para a troca dos pontos
     private float dotDelay = 0.5f; // Intervalo entre a troca dos pontos
 
-    public void LoadScene(string sceneName)
+    private void Start()
     {
-        StartCoroutine(LoadSceneAsync(sceneName));
+        // Inicia a corrotina para carregar a cena e a animação de pontos
+        StartCoroutine(LoadSceneCoroutine(SceneLoader.NextScene));
+        StartCoroutine(UpdateLoadingTextCoroutine());
     }
 
-    private IEnumerator LoadSceneAsync(string sceneName)
+    private IEnumerator LoadSceneCoroutine(string sceneName)
     {
         // Exibir o texto de loading por 5 segundos
-        yield return new WaitForSeconds(5f);
-
-        // Atualiza o texto de carregamento com os pontos
-        while (dotCount < 3) // Exibe o texto de loading por um tempo
+        float elapsed = 0f;
+        while (elapsed < 5f)
         {
-            UpdateLoadingText();
-            yield return null;
+            elapsed += Time.deltaTime; // Aumenta o tempo decorrido
+            yield return null; // Espera um frame
         }
 
-        // Carregar a cena do jogo (Jogo1)
-        AsyncOperation operation = SceneManager.LoadSceneAsync("Jogo1");
+        // Após 5 segundos, comece a carregar a cena
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+
+        // Enquanto a cena estiver carregando
         while (!operation.isDone)
         {
-            // Aguardar o carregamento da cena
-            yield return null;
+            yield return null; // Espera um frame
         }
     }
 
-    private void Update()
+    private IEnumerator UpdateLoadingTextCoroutine()
     {
-        if (loadingText != null)
+        while (true) // Loop infinito para atualizar a animação dos pontos
         {
-            dotTimer += Time.deltaTime;
-
-            // Se o tempo passar, troca os pontos
-            if (dotTimer >= dotDelay)
-            {
-                dotCount = (dotCount % 3) + 1; // Alterna entre 1, 2 e 3
-                dotTimer = 0f; // Reset o temporizador
-                UpdateLoadingText(); // Atualiza o texto
-            }
+            UpdateLoadingText();
+            yield return new WaitForSeconds(dotDelay); // Espera um intervalo antes de atualizar novamente
         }
     }
 
     private void UpdateLoadingText()
     {
-        if (loadingText != null)
-        {
-            string dots = new string('.', dotCount); // Cria a quantidade de pontos
-            loadingText.text = baseText + dots; // Atualiza o texto no UI
-        }
+        loadingText.text = baseText + new string('.', dotCount);
+        dotCount = (dotCount + 1) % 4; // Cicla entre 0 e 3
     }
 }

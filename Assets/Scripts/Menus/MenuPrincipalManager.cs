@@ -13,14 +13,8 @@ public class MenuPrincipalManager : MonoBehaviour
 
     public void Jogar()
     {
-        if (loadingManager != null)
-        {
-            loadingManager.LoadScene("Loading Scene"); // Carregar a cena de loading
-        }
-        else
-        {
-            Debug.LogError("LoadingManager não foi atribuído no inspetor.");
-        }
+        SceneLoader.NextScene = nomeDoLevelDeJogo; // Define a próxima cena a ser carregada
+        SceneManager.LoadScene("Loading Scene"); // Carrega a cena de loading
     }
 
     public void AbrirOpcoes()
