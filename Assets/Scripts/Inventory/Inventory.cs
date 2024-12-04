@@ -7,23 +7,19 @@ public class Inventory : MonoBehaviour
     public static InventoryItem carriedItem;
 
     [SerializeField] private InventorySlot[] inventorySlots;
-    [SerializeField] private InventorySlot[] equipmentSlots;
     [SerializeField] private Transform draggablesTransform;
     [SerializeField] private InventoryItem itemPrefab;
-    [SerializeField] private Item[] items;
     [SerializeField] private Button giveItemBtn;
-
-    public PlayerAttack playerAtk;
-    public PlayerHealthManager playerHlt;
 
     private void Awake()
     {
         Singleton = this;
 
-        if (giveItemBtn != null)
-        {
-            giveItemBtn.onClick.AddListener(() => SpawnInventoryItem());
-        }
+        // Configuração do botão de dar item, se necessário
+        // if (giveItemBtn != null)
+        // {
+        //     giveItemBtn.onClick.AddListener(() => SpawnInventoryItem());
+        // }
     }
 
     private void Update()
@@ -51,63 +47,43 @@ public class Inventory : MonoBehaviour
 
         // Define o item clicado como carregado
         carriedItem = item;
-
-        // Garante que o item seja visível e arrastável
         carriedItem.canvasGroup.blocksRaycasts = false; // Impede a interação do item com outros objetos enquanto está sendo arrastado
         carriedItem.transform.SetParent(draggablesTransform); // Move o item para a hierarquia de arrastáveis
         carriedItem.transform.localPosition = Vector3.zero; // Garante que a posição relativa seja zerada
         carriedItem.GetComponent<RectTransform>().SetAsLastSibling(); // Garante que o item fique no topo da hierarquia de renderização
     }
 
-    public void EquipEquipment(SlotTag tag, InventoryItem item = null)
+    public void SpawnInventoryItem(Item item)
     {
-        switch (tag)
+        if (item == null)
         {
-            case SlotTag.Damage:
-                if (item == null)
-                {
-                    Debug.Log("Removeu Item tag Damage");
-                }
-                else
-                {
-                    Debug.Log("Equipou Item tag Damage");
-                }
-                break;
-
-            case SlotTag.Equipment:
-                if (item == null)
-                {
-                    Debug.Log("Removeu Item tag Equipment");
-                }
-                else
-                {
-                    Debug.Log("Equipou Item tag Equipment");
-                }
-                break;
-
-            default:
-                Debug.LogWarning($"Unhandled SlotTag: {tag}");
-                break;
+            Debug.LogError("Nenhum item foi passado para SpawnInventoryItem.");
+            return;
         }
-    }
 
-    public void SpawnInventoryItem(Item item = null)
-    {
-        Item selectedItem = item ?? PickRandomItem();
-
+        // Verifica se há espaço no inventário
         foreach (var slot in inventorySlots)
         {
             if (slot.myItem == null)
             {
-                Instantiate(itemPrefab, slot.transform).Initialize(selectedItem, slot);
-                break;
+                // Cria o item no slot disponível
+                var newItem = Instantiate(itemPrefab, slot.transform);
+                newItem.Initialize(item, slot);
+                return; // Item adicionado, sai do método
             }
         }
+
+        Debug.LogWarning("Inventário cheio! O item não foi adicionado.");
+        // Aqui você pode exibir uma mensagem de erro no UI, se necessário
     }
 
-    private Item PickRandomItem()
+    public bool HasAvailableSlot()
     {
-        int randomIndex = Random.Range(0, items.Length);
-        return items[randomIndex];
+        foreach (var slot in inventorySlots)
+        {
+            if (slot.myItem == null)
+                return true;
+        }
+        return false;
     }
 }

@@ -74,7 +74,7 @@ public class InventoryManager : MonoBehaviour
         return added; // Retorna true se o material foi adicionado, false se não foi
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
         // Mostra a quantidade atual e o limite máximo de cada material
         plasticText.text = "Plastic: " + plasticQnt.ToString() + "/" + maxPlastic.ToString();

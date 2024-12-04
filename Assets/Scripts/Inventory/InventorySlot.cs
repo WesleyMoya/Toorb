@@ -56,12 +56,6 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         myItem.canvasGroup.blocksRaycasts = true; // Reativa a interação com o item
         myItem.transform.localPosition = Vector3.zero; // Garante que o item esteja centralizado no slot
 
-        // Equipar ou processar o item com base na tag do slot
-        if (myTag != SlotTag.None)
-        {
-            Inventory.Singleton.EquipEquipment(myTag, myItem);
-        }
-
         // Limpa o item carregado globalmente
         Inventory.carriedItem = null;
     }
