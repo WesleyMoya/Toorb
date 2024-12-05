@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 324441312}
   - component: {fileID: 324441314}
   - component: {fileID: 324441313}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Toorb Background Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1628,6 +1628,7 @@ MonoBehaviour:
   painelMenuInicial: {fileID: 1095510181}
   painelOpcoes: {fileID: 629649406}
   imagemMenuInicial: {fileID: 0}
+  loadingManager: {fileID: 0}
 --- !u!4 &1499185591
 Transform:
   m_ObjectHideFlags: 0
