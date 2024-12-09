@@ -14,6 +14,8 @@ public class InventoryManager : MonoBehaviour
     public int maxMetal = 100;
     public int maxWood = 100;
 
+    public int upgradeKey = 0;
+
     [SerializeField] private TextMeshProUGUI plasticText;
     [SerializeField] private TextMeshProUGUI metalText;
     [SerializeField] private TextMeshProUGUI woodText;
@@ -97,4 +99,5 @@ public class InventoryManager : MonoBehaviour
                 return false;
         }
     }
+
 }

@@ -6,6 +6,7 @@ public class DialogManager : MonoBehaviour
 {
     [SerializeField] private Image npcIcon;
     [SerializeField] private TextMeshProUGUI npcName;
+    [SerializeField] private TextMeshProUGUI Buttontext;
     [SerializeField] private TextMeshProUGUI dialogContent;
     [SerializeField] private GameObject dialogPanel;
     [SerializeField] private GameObject hud;
@@ -27,14 +28,14 @@ public class DialogManager : MonoBehaviour
     }
 
     // Método para iniciar o diálogo com os parâmetros
-    public void StartDialog(Sprite icon, string name, string content, GameObject npcSpecificMenu)
+    public void StartDialog(Sprite icon, string name, string content, string buttonText, GameObject npcSpecificMenu)
     {
         gameInputsHandler.isPlayerMovementLocked = true;
         npcIcon.sprite = icon;
         npcName.text = name;
         dialogContent.text = content;
         npcMenu = npcSpecificMenu; // Recebe o menu específico do NPC
-
+        Buttontext.text = buttonText;
         hud.SetActive(false);
         dialogPanel.SetActive(true);
     }

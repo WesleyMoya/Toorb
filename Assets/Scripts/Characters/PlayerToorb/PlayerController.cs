@@ -147,4 +147,16 @@ public class PlayerController : MonoBehaviour
         isAttacking = false;
         playerAttackScript.DeactivateAttack();
     }
+
+    // Método para bloquear o movimento do jogador
+    public void LockMovement()
+    {
+        gameInputsHandler.isPlayerMovementLocked = true;
+    }
+
+    // Método para desbloquear o movimento do jogador
+    public void UnlockMovement()
+    {
+        gameInputsHandler.isPlayerMovementLocked = false;
+    }
 }

@@ -16992,6 +16992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcIcon: {fileID: 2002853318}
   npcName: {fileID: 111789989}
+  Buttontext: {fileID: 0}
   dialogContent: {fileID: 787892732}
   dialogPanel: {fileID: 588801375}
   hud: {fileID: 1471986615}
@@ -75452,11 +75453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6043453127752176191, guid: 5cba097c33dfc9c4084c31eb0ae8fd9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.22
+      value: 12.7
       objectReference: {fileID: 0}
     - target: {fileID: 6043453127752176191, guid: 5cba097c33dfc9c4084c31eb0ae8fd9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.26
+      value: 37.3
       objectReference: {fileID: 0}
     - target: {fileID: 6043453127752176191, guid: 5cba097c33dfc9c4084c31eb0ae8fd9e, type: 3}
       propertyPath: m_LocalPosition.z

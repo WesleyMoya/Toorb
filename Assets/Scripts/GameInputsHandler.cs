@@ -24,31 +24,58 @@ public class GameInputsHandler : MonoBehaviour
 
     public void ToggleInventory()
     {
-        if (isMapOpen || isPauseMenuOpen) return;
-        isInventoryOpen = !isInventoryOpen;
-        isPlayerMovementLocked = isInventoryOpen;
+        // Permite fechar o inventário mesmo se o movimento estiver bloqueado
+        if (isInventoryOpen)
+        {
+            CloseInventory();
+            return;
+        }
 
-        if (isInventoryOpen) OpenInventory();
-        else CloseInventory();
+        // Verifica se o movimento do jogador está bloqueado
+        if (isPlayerMovementLocked) return;
+
+        if (isMapOpen || isPauseMenuOpen) return;
+        isInventoryOpen = true;
+        isPlayerMovementLocked = true;
+
+        OpenInventory();
     }
 
     public void ToggleMap()
     {
-        if (isInventoryOpen || isPauseMenuOpen) return;
-        isMapOpen = !isMapOpen;
-        isPlayerMovementLocked = isMapOpen;
+        // Permite fechar o mapa mesmo se o movimento estiver bloqueado
+        if (isMapOpen)
+        {
+            CloseMap();
+            return;
+        }
 
-        if (isMapOpen) OpenMap();
-        else CloseMap();
+        // Verifica se o movimento do jogador está bloqueado
+        if (isPlayerMovementLocked) return;
+
+        if (isInventoryOpen || isPauseMenuOpen) return;
+        isMapOpen = true;
+        isPlayerMovementLocked = true;
+
+        OpenMap();
     }
 
     public void TogglePause()
     {
-        isPauseMenuOpen = !isPauseMenuOpen;
-        isPlayerMovementLocked = isPauseMenuOpen;
+        // Permite fechar o menu de pausa mesmo se o movimento estiver bloqueado
+        if (isPauseMenuOpen)
+        {
+            ResumeGame();
+            return;
+        }
 
-        if (isPauseMenuOpen) OpenPauseMenu();
-        else ResumeGame();
+        // Verifica se o movimento do jogador está bloqueado
+        if (isPlayerMovementLocked) return;
+
+        isPauseMenuOpen = true;
+        isPlayerMovementLocked = true;
+
+        OpenPauseMenu();
     }
 
     private void OpenPauseMenu()
@@ -77,6 +104,8 @@ public class GameInputsHandler : MonoBehaviour
     {
         mapUI.SetActive(false);
         gameHUD.SetActive(true);
+        isMapOpen = false;
+        isPlayerMovementLocked = false; // Permite movimento ao fechar o mapa
     }
 
     private void OpenInventory()
@@ -89,5 +118,9 @@ public class GameInputsHandler : MonoBehaviour
     {
         inventoryUI.SetActive(false);
         gameHUD.SetActive(true);
+        isInventoryOpen = false;
+        isPlayerMovementLocked = false; // Permite movimento ao fechar o inventário
     }
+
+    
 }
