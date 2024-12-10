@@ -33,7 +33,6 @@ public class MenuPrincipalManager : MonoBehaviour
 
     public void Sair()
     {
-        Debug.Log("Saiu do jogo");
         Application.Quit();
     }
 }

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         prioritizeX = false; // Começa sem priorizar nenhum eixo
         moving = false; // Começa parado

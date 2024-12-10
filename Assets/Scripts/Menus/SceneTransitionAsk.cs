@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI; // Para usar o Button
 
 public class SceneTransitionAsk : MonoBehaviour
 {
+    [SerializeField] private string nomeDoLevelDeJogo = "Jogo2"; // Nome da cena do jogo
+    [SerializeField] private LoadingManager loadingManager; // Referência ao LoadingManager
     // Referência ao GameObject que será habilitado
     public GameObject transitionSceneAskScreen;
     // Referências ao HUD e UIManager
@@ -44,9 +47,9 @@ public class SceneTransitionAsk : MonoBehaviour
     // Método chamado quando o botão "Sim" é pressionado
     private void OnYesButtonPressed()
     {
-        // Lógica para o botão "Sim"
-        Debug.Log("Sim pressionado. Continuando a transição...");
-        // Aqui você pode adicionar a lógica para continuar a transição de cena ou o que for necessário
+        SceneLoader.NextScene = nomeDoLevelDeJogo; // Define a próxima cena a ser carregada
+        SceneManager.LoadScene("Loading Scene"); // Carrega a cena de loading
+        transitionSceneAskScreen.SetActive(false);
     }
 
     // Método chamado quando o botão "Não" é pressionado
