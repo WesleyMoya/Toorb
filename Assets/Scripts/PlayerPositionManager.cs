@@ -23,6 +23,17 @@ public class PlayerPositionManager : MonoBehaviour
             {
                 Debug.LogWarning("Objeto com a tag 'Player' não foi encontrado na cena.");
             }
+
+            // Desativa o GameObject "Recycler"
+            GameObject recycler = GameObject.Find("Recycler");
+            if (recycler != null)
+            {
+                recycler.SetActive(false);
+            }
+            else
+            {
+                Debug.LogWarning("Objeto 'Recycler' não foi encontrado na cena.");
+            }
         }
 
         if (SceneManager.GetActiveScene().name == "Jogo1")
@@ -38,6 +49,17 @@ public class PlayerPositionManager : MonoBehaviour
             else
             {
                 Debug.LogWarning("Objeto com a tag 'Player' não foi encontrado na cena.");
+            }
+
+            // Ativa o GameObject "Recycler"
+            GameObject recycler = GameObject.Find("Recycler");
+            if (recycler != null)
+            {
+                recycler.SetActive(true);
+            }
+            else
+            {
+                Debug.LogWarning("Objeto 'Recycler' não foi encontrado na cena.");
             }
         }
     }

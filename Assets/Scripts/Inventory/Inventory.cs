@@ -7,19 +7,20 @@ public class Inventory : MonoBehaviour
     public static InventoryItem carriedItem;
 
     [SerializeField] private InventorySlot[] inventorySlots;
+    [SerializeField] private InventorySlot[] equipmentSlots;
     [SerializeField] private Transform draggablesTransform;
     [SerializeField] private InventoryItem itemPrefab;
+    [SerializeField] private Item[] items;
     [SerializeField] private Button giveItemBtn;
 
     private void Awake()
     {
         Singleton = this;
 
-        // Configuração do botão de dar item, se necessário
-        // if (giveItemBtn != null)
-        // {
-        //     giveItemBtn.onClick.AddListener(() => SpawnInventoryItem());
-        // }
+        if (giveItemBtn != null)
+        {
+            giveItemBtn.onClick.AddListener(() => SpawnInventoryItem());
+        }
     }
 
     private void Update()
@@ -47,43 +48,49 @@ public class Inventory : MonoBehaviour
 
         // Define o item clicado como carregado
         carriedItem = item;
+
+        // Garante que o item seja visível e arrastável
         carriedItem.canvasGroup.blocksRaycasts = false; // Impede a interação do item com outros objetos enquanto está sendo arrastado
         carriedItem.transform.SetParent(draggablesTransform); // Move o item para a hierarquia de arrastáveis
         carriedItem.transform.localPosition = Vector3.zero; // Garante que a posição relativa seja zerada
         carriedItem.GetComponent<RectTransform>().SetAsLastSibling(); // Garante que o item fique no topo da hierarquia de renderização
     }
 
-    public void SpawnInventoryItem(Item item)
+    public void EquipEquipment(SlotTag tag, InventoryItem item = null)
     {
-        if (item == null)
+        switch (tag)
         {
-            Debug.LogError("Nenhum item foi passado para SpawnInventoryItem.");
-            return;
-        }
+            case SlotTag.Damage:
+                Debug.Log(item == null ? "Removeu um item de Damage." : "Equipou um item de Damage.");
+                break;
 
-        // Verifica se há espaço no inventário
+            case SlotTag.Equipment:
+                Debug.Log(item == null ? "Removeu um item de Equipment." : "Equipou um item de Equipment.");
+                break;
+
+            default:
+                Debug.LogWarning($"Unhandled SlotTag: {tag}");
+                break;
+        }
+    }
+
+    public void SpawnInventoryItem(Item item = null)
+    {
+        Item selectedItem = item ?? PickRandomItem();
+
         foreach (var slot in inventorySlots)
         {
             if (slot.myItem == null)
             {
-                // Cria o item no slot disponível
-                var newItem = Instantiate(itemPrefab, slot.transform);
-                newItem.Initialize(item, slot);
-                return; // Item adicionado, sai do método
+                Instantiate(itemPrefab, slot.transform).Initialize(selectedItem, slot);
+                break;
             }
         }
-
-        Debug.LogWarning("Inventário cheio! O item não foi adicionado.");
-        // Aqui você pode exibir uma mensagem de erro no UI, se necessário
     }
 
-    public bool HasAvailableSlot()
+    private Item PickRandomItem()
     {
-        foreach (var slot in inventorySlots)
-        {
-            if (slot.myItem == null)
-                return true;
-        }
-        return false;
+        int randomIndex = Random.Range(0, items.Length);
+        return items[randomIndex];
     }
 }

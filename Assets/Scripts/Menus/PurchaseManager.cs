@@ -18,21 +18,25 @@ public class PurchaseManager : MonoBehaviour
     private void Start()
     {
         // Configurações iniciais de mensagens
-        insufficientMaterialsText?.gameObject.SetActive(false);
-        inventoryFullText?.gameObject.SetActive(false);
+        if (insufficientMaterialsText != null)
+            insufficientMaterialsText.gameObject.SetActive(false);
+
+        if (inventoryFullText != null)
+            inventoryFullText.gameObject.SetActive(false);
 
         // Configura o botão de compra
-        purchaseButton?.onClick.AddListener(() => TryPurchase(itemToPurchase, requiredPlastic, requiredMetal, requiredWood));
+        if (purchaseButton != null)
+            purchaseButton.onClick.AddListener(() => TryPurchase(itemToPurchase, requiredPlastic, requiredMetal, requiredWood));
     }
 
     public void TryPurchase(Item item, int requiredPlastic, int requiredMetal, int requiredWood)
     {
         // Verifica se o inventário tem espaço disponível
-        if (!inventory.HasAvailableSlot())
-        {
-            StartCoroutine(ShowInventoryFullMessage());
-            return;
-        }
+        //if (!inventory.HasAvailableSlot())
+        //{
+            //StartCoroutine(ShowInventoryFullMessage());
+            //return;
+        //}
 
         // Verifica se o player tem materiais suficientes
         if (inventoryManager.plasticQnt >= requiredPlastic &&
