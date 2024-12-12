@@ -4,7 +4,7 @@ using System; // Não é usado diretamente no código, mas incluído aqui.
 
 public class Enemy : MonoBehaviour
 {
-    public int maxHealth = 100; // Define a vida máxima do inimigo.
+    public int maxHealth = 50; // Define a vida máxima do inimigo.
     private int currentHealth;  // Armazena a vida atual do inimigo.
 
     public Animator anim; // Referência ao componente Animator para controlar animações como "Hit" e "Death".
@@ -59,8 +59,6 @@ public class Enemy : MonoBehaviour
     // Método chamado quando o inimigo morre.
     void Die()
     {
-        Debug.Log("Inimigo destruído!"); // Log para depuração.
-
         // Desativa o Collider2D do inimigo para evitar interações enquanto ele "morre".
         GetComponent<Collider2D>().enabled = false;
 

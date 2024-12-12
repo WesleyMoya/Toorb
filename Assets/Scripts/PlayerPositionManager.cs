@@ -81,16 +81,6 @@ public class PlayerPositionManager : MonoBehaviour
                 Debug.LogWarning("Objeto com Constructors não encontrado na cena.");
             }
 
-            // Ativa o GameObject "Recycler"
-            GameObject recycler = GameObject.Find("Recycler");
-            if (recycler != null)
-            {
-                recycler.SetActive(true);
-            }
-            else
-            {
-                Debug.LogWarning("Objeto 'Recycler' não foi encontrado na cena.");
-            }
         }
     }
 }

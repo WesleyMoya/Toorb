@@ -61,15 +61,14 @@ public class Inventory : MonoBehaviour
         switch (tag)
         {
             case SlotTag.Damage:
-                Debug.Log(item == null ? "Removeu um item de Damage." : "Equipou um item de Damage.");
+                Debug.Log(item == null ? "removeu um item de Damage." : "equipou um item de Damage.");
                 break;
 
             case SlotTag.Equipment:
-                Debug.Log(item == null ? "Removeu um item de Equipment." : "Equipou um item de Equipment.");
+                Debug.Log(item == null ? "removeu um item de Equipment." : "equipou um item de Equipment.");
                 break;
 
             default:
-                Debug.LogWarning($"Unhandled SlotTag: {tag}");
                 break;
         }
     }

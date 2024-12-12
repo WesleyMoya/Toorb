@@ -13,6 +13,7 @@ public class ConstructManager : MonoBehaviour
     public GameObject constructArea;
     public GameObject baseConstruct;
     public GameObject decoration;
+    public GameObject hud;
 
     // Referência ao Construct Menu
     public GameObject constructMenu;
@@ -80,17 +81,7 @@ public class ConstructManager : MonoBehaviour
         decoration.SetActive(true);
         baseConstruct.SetActive(false);
         constructMenu.SetActive(false);
-        GameObject pai = GameObject.Find("UI/HUD/GUI");
-        if (pai != null)
-        {
-            GameObject filho = pai.transform.Find("HUD").gameObject;
-
-            // Se o objeto "Filho" for encontrado, ative-o
-            if (filho != null)
-            {
-                filho.SetActive(true);
-            }
-        }
+        hud.SetActive(true);  
         playerController.UnlockMovement();
     }
 

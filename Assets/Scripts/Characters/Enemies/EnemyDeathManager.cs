@@ -35,8 +35,4 @@ public class EnemyDeathManager : MonoBehaviour
         enemyCountText.text = $"{DerrotedEnemies}/5";
     }
 
-    // Método chamado uma vez por frame. Aqui está vazio, pois não é necessário no momento.
-    void Update()
-    {
-    }
 }
