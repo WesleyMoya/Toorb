@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+using System;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,8 +9,22 @@ public class Enemy : MonoBehaviour
 
     public Animator anim;  // Referência ao Animator para animações de dano/morte
 
+    // Referência ao script EnemyDeathManager
+    private EnemyDeathManager deathManager;
+
     void Start()
     {
+        // Tenta encontrar o objeto com o nome "EnemyDeathManager" e obter o componente EnemyDeathManager
+        GameObject deathManagerObject = GameObject.Find("EnemyDeathManager");
+        if (deathManagerObject != null)
+        {
+            deathManager = deathManagerObject.GetComponent<EnemyDeathManager>();
+        }
+        else
+        {
+            Debug.LogError("EnemyDeathManager não encontrado!");
+        }
+
         currentHealth = maxHealth; // Define a vida atual para o valor máximo no início
     }
 
@@ -42,6 +56,12 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Inimigo destruído!");
         GetComponent<Collider2D>().enabled = false; // Desativa o collider para impedir novas interações
+
+        // Incrementa a variável DerrotedEnemies no script EnemyDeathManager
+        if (deathManager != null)
+        {
+            deathManager.IncrementDefeatedEnemies(); // Chama o método para incrementar e atualizar o texto
+        }
 
         // Espera um tempo para a animação de morte e destrói o objeto
         StartCoroutine(DestroyAfterDeathAnimation());

@@ -18,6 +18,11 @@ public class PlayerPositionManager : MonoBehaviour
             {
                 // Define a nova posição do jogador
                 player.transform.position = new Vector3(41f, 33f, 0f);
+                PlayerController playerController = player.GetComponent<PlayerController>();
+                if (playerController != null)
+                {
+                    playerController.UnlockMovement();
+                }
             }
             else
             {
@@ -43,6 +48,11 @@ public class PlayerPositionManager : MonoBehaviour
 
             if (player != null)
             {
+                PlayerController playerController = player.GetComponent<PlayerController>();
+                if (playerController != null)
+                {
+                    playerController.UnlockMovement();
+                }
                 // Define a nova posição do jogador
                 player.transform.position = new Vector3(40f, -5f, 0f);
             }

@@ -10,8 +10,6 @@ public class SceneTransitionAsk : MonoBehaviour
     [SerializeField] private LoadingManager loadingManager; // Referência ao LoadingManager
     // Referência ao GameObject que será habilitado
     public GameObject transitionSceneAskScreen;
-    // Referências ao HUD e UIManager
-    public GameObject hud;
     // Referência ao PlayerController
     private PlayerController playerController;
 
@@ -35,10 +33,16 @@ public class SceneTransitionAsk : MonoBehaviour
         // Verifica se o objeto colidido tem a tag "Player"
         if (collision.CompareTag("Player"))
         {
-            // Habilita o GameObject TransitionSceneAskScreen
+
             transitionSceneAskScreen.SetActive(true);
-            // Desabilita o HUD
-            hud.SetActive(false);
+            // Tenta encontrar o HUD na cena
+            GameObject hud = GameObject.Find("HUD");
+            if (hud != null)
+            {
+                // Desabilita o HUD se encontrado
+                hud.SetActive(false);
+            }
+
             // Bloqueia o movimento e ataque do jogador
             playerController.LockMovement();
         }
@@ -55,13 +59,17 @@ public class SceneTransitionAsk : MonoBehaviour
     // Método chamado quando o botão "Não" é pressionado
     private void OnNoButtonPressed()
     {
-        // Lógica para o botão "Não"
-        Debug.Log("Não pressionado. Desbloqueando movimento e reabilitando HUD.");
-        // Habilita o HUD
-        hud.SetActive(true);
+        // Tenta encontrar o HUD na cena
+        GameObject hud = GameObject.Find("HUD");
+        if (hud != null)
+        {
+            // Habilita o HUD se encontrado
+            hud.SetActive(true);
+        }
         // Desbloqueia o movimento e ataque do jogador
         playerController.UnlockMovement(); // Supondo que você tenha um método UnlockMovement no PlayerController
         // Desabilita a tela de transição
         transitionSceneAskScreen.SetActive(false);
     }
+    
 }
