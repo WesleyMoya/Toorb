@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class ConstructManager : MonoBehaviour
 {
+
+    [SerializeField] private int requiredPlastic; // Quantidade de plástico necessária
+    [SerializeField] private int requiredMetal; // Quantidade de metal necessária
+    [SerializeField] private int requiredWood; // Quantidade de madeira necessária
+
+    public GameObject mensagemErro;
+    public GameObject constructArea;
+    public GameObject baseConstruct;
+    public GameObject decoration;
     // Referência ao HUD
     public GameObject hud;
 
@@ -41,35 +50,44 @@ public class ConstructManager : MonoBehaviour
         }
     }
 
-    // Método para abrir o Construct Menu
-    public void OpenConstructMenu()
+    public void TryConstruct()
     {
-        // Habilita o Construct Menu
-        constructMenu.SetActive(true);
-
-        // Desabilita o HUD
-        hud.SetActive(false);
-
-        // Bloqueia o movimento do jogador
-        if (playerController != null)
+        // Verifica se o jogador tem os materiais necessários
+        if (inventoryManager.plasticQnt >= requiredPlastic &&
+            inventoryManager.metalQnt >= requiredMetal &&
+            inventoryManager.woodQnt >= requiredWood)
         {
-            playerController.LockMovement();
+            // Subtrai os materiais necessários do inventário do jogador
+            inventoryManager.plasticQnt -= requiredPlastic;
+            inventoryManager.metalQnt -= requiredMetal;
+            inventoryManager.woodQnt -= requiredWood;
+
+            inventoryManager.UpdateUI();
+            // Constrói o objeto
+            ConstructObject();
+        }
+        else
+        {
+            // Mostra a mensagem de erro
+            mensagemErro.SetActive(true);
+            Invoke("HideErrorMessage", 3f);
         }
     }
 
-    // Método para fechar o Construct Menu
-    public void CloseConstructMenu()
+    // Método para construir o objeto
+    private void ConstructObject()
     {
-        // Desabilita o Construct Menu
+        Destroy(constructArea.GetComponent<Collider2D>());
+        decoration.SetActive(true);
+        baseConstruct.SetActive(false);
         constructMenu.SetActive(false);
-
-        // Habilita o HUD
         hud.SetActive(true);
+        playerController.UnlockMovement();
+    }
 
-        // Desbloqueia o movimento do jogador
-        if (playerController != null)
-        {
-            playerController.UnlockMovement();
-        }
+    // Método para ocultar a mensagem de erro
+    private void HideErrorMessage()
+    {
+        mensagemErro.SetActive(false);
     }
 }

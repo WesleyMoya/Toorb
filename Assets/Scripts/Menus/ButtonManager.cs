@@ -19,7 +19,11 @@ public class ButtonManager : MonoBehaviour
     // Método para habilitar o HUD, destravar o personagem e desabilitar o menu NPC
     public void OnButtonPressed()
     {
-        hud.SetActive(true); // Habilita o HUD
+        GameObject hud = GameObject.Find("HUD");
+        if (hud != null)
+        {
+            hud.SetActive(true);
+        }
         playerController.UnlockMovement(); // Desbloqueia o movimento do jogador
         menuNPC.SetActive(false); // Desabilita o menu NPC
     }

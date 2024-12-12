@@ -5,18 +5,22 @@ using UnityEngine;
 public class ConstructInteract : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject constructMenu;
-    [SerializeField] private GameObject hud;
 
     private PlayerController playerController;
 
     private void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
+
     }
     public void Interact()
     {
         playerController.LockMovement();
         constructMenu.SetActive(true);
-        hud.SetActive(false);
+        GameObject hud = GameObject.Find("HUD");
+        if (hud != null)
+        {
+            hud.SetActive(false);
+        }
     }
 }

@@ -29,6 +29,16 @@ public class PlayerPositionManager : MonoBehaviour
                 Debug.LogWarning("Objeto com a tag 'Player' não foi encontrado na cena.");
             }
 
+            GameObject constructions = GameObject.Find("ConstructionArea");
+            if (constructions != null)
+            {
+                constructions.SetActive(false);
+            }
+            else
+            {
+                Debug.LogWarning("Objeto com Constructors não encontrado na cena.");
+            }
+
             // Desativa o GameObject "Recycler"
             GameObject recycler = GameObject.Find("Recycler");
             if (recycler != null)
@@ -59,6 +69,16 @@ public class PlayerPositionManager : MonoBehaviour
             else
             {
                 Debug.LogWarning("Objeto com a tag 'Player' não foi encontrado na cena.");
+            }
+
+            GameObject constructions = GameObject.Find("ConstructionArea");
+            if (constructions != null)
+            {
+                constructions.SetActive(true);
+            }
+            else
+            {
+                Debug.LogWarning("Objeto com Constructors não encontrado na cena.");
             }
 
             // Ativa o GameObject "Recycler"

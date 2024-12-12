@@ -26,10 +26,20 @@ public class SceneTransitor2 : MonoBehaviour
     // Método chamado quando o botão "Sim" é pressionado
     public void YesButtonPressed()
     {
+        GameObject constructions = GameObject.Find("ConstructionArea");
+        if (constructions != null)
+        {
+            constructions.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("Objeto com Constructors não encontrado na cena.");
+        }
         SceneLoader.NextScene = nomeDoLevelDeJogo; // Define a próxima cena a ser carregada
         SceneManager.LoadScene("Loading Scene"); // Carrega a cena de loading
         inventoryManager.upgradeKey++;
-        
+        inventoryManager.UpdateUI();
+
     }
 
     // Método chamado quando o botão "Não" é pressionado

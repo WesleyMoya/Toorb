@@ -8,6 +8,7 @@ public class MenuPrincipalManager : MonoBehaviour
     [SerializeField] private string nomeDoLevelDeJogo = "Jogo1"; // Nome da cena do jogo
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private GameObject painelMusica;
     [SerializeField] private LoadingManager loadingManager; // Referência ao LoadingManager
     [SerializeField] private GameObject painelComoJogar;
     [SerializeField] private GameObject menuOpcoes;
@@ -49,6 +50,15 @@ public class MenuPrincipalManager : MonoBehaviour
     {
         menuControles.SetActive(false);
     }
+    public void AbrirOpcoesMusica()
+    {
+        painelMusica.SetActive(true);
+    }
+    public void FecharOpcoesMusica()
+    {
+        painelMusica.SetActive(false);
+    }
+
 
     public void Sair()
     {
