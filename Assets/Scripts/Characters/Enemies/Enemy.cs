@@ -1,20 +1,21 @@
-using UnityEngine;
-using System.Collections;
-using System;
+using UnityEngine; // Namespace principal para desenvolvimento no Unity.
+using System.Collections; // Necessário para usar Corrotinas.
+using System; // Não é usado diretamente no código, mas incluído aqui.
 
 public class Enemy : MonoBehaviour
 {
-    public int maxHealth = 100; // Vida máxima do inimigo
-    private int currentHealth;  // Vida atual do inimigo
+    public int maxHealth = 100; // Define a vida máxima do inimigo.
+    private int currentHealth;  // Armazena a vida atual do inimigo.
 
-    public Animator anim;  // Referência ao Animator para animações de dano/morte
+    public Animator anim; // Referência ao componente Animator para controlar animações como "Hit" e "Death".
 
-    // Referência ao script EnemyDeathManager
+    // Referência ao script EnemyDeathManager para atualizar a contagem de inimigos derrotados.
     private EnemyDeathManager deathManager;
 
+    // Método chamado uma vez no início da execução do jogo.
     void Start()
     {
-        // Tenta encontrar o objeto com o nome "EnemyDeathManager" e obter o componente EnemyDeathManager
+        // Tenta localizar o objeto "EnemyDeathManager" na cena e obter seu componente EnemyDeathManager.
         GameObject deathManagerObject = GameObject.Find("EnemyDeathManager");
         if (deathManagerObject != null)
         {
@@ -22,55 +23,64 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            // Exibe um erro no console se o objeto "EnemyDeathManager" não for encontrado.
             Debug.LogError("EnemyDeathManager não encontrado!");
         }
 
-        currentHealth = maxHealth; // Define a vida atual para o valor máximo no início
+        // Inicializa a vida atual do inimigo com a vida máxima.
+        currentHealth = maxHealth;
     }
 
-    // Método para o inimigo receber dano
+    // Método público para o inimigo receber dano.
     public void TakeDamage(int damageAmount)
     {
-        currentHealth -= damageAmount; // Reduz a vida pelo valor do dano recebido
+        // Reduz a vida do inimigo pelo valor do dano recebido.
+        currentHealth -= damageAmount;
 
-        // Toca a animação de dano
+        // Dispara a animação de dano usando o trigger "Hit".
         anim.SetTrigger("Hit");
 
-        // Se a vida do inimigo chegar a 0, destrói o inimigo
+        // Verifica se a vida chegou a 0 ou menos.
         if (currentHealth <= 0)
         {
-            Die();
+            Die(); // Chama o método para lidar com a morte do inimigo.
         }
     }
 
-    // Nova função: Toca a animação de Hit com base na direção
+    // Método para tocar a animação de dano direcionada (opcional, usado para animações que dependem da direção do ataque).
     public void PlayHitAnimation(Vector2 direction)
     {
+        // Define os parâmetros da direção no Animator para ajustar a animação.
         anim.SetFloat("HitX", direction.x);
         anim.SetFloat("HitY", direction.y);
-        anim.SetTrigger("Hit"); // Dispara a animação de hit
+        anim.SetTrigger("Hit"); // Dispara a animação de hit.
     }
 
-    // Método chamado quando a vida chega a 0
+    // Método chamado quando o inimigo morre.
     void Die()
     {
-        Debug.Log("Inimigo destruído!");
-        GetComponent<Collider2D>().enabled = false; // Desativa o collider para impedir novas interações
+        Debug.Log("Inimigo destruído!"); // Log para depuração.
 
-        // Incrementa a variável DerrotedEnemies no script EnemyDeathManager
+        // Desativa o Collider2D do inimigo para evitar interações enquanto ele "morre".
+        GetComponent<Collider2D>().enabled = false;
+
+        // Atualiza a contagem de inimigos derrotados no EnemyDeathManager.
         if (deathManager != null)
         {
-            deathManager.IncrementDefeatedEnemies(); // Chama o método para incrementar e atualizar o texto
+            deathManager.IncrementDefeatedEnemies(); // Incrementa o contador e atualiza o texto da UI.
         }
 
-        // Espera um tempo para a animação de morte e destrói o objeto
+        // Inicia uma corrotina para esperar a animação de morte antes de destruir o objeto.
         StartCoroutine(DestroyAfterDeathAnimation());
     }
 
-    // Corrotina para esperar pela animação de morte antes de destruir
+    // Corrotina para aguardar a animação de morte antes de destruir o objeto.
     IEnumerator DestroyAfterDeathAnimation()
     {
-        yield return new WaitForSeconds(1f); // Ajuste esse tempo para coincidir com a animação de morte
-        Destroy(gameObject);  // Destrói o inimigo após a animação de morte
+        // Aguarda 1 segundo (ou o tempo correspondente à animação de morte).
+        yield return new WaitForSeconds(1f);
+
+        // Remove o game object do inimigo da cena.
+        Destroy(gameObject);
     }
 }

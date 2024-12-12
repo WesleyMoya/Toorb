@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour
 {
-    [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameInputsHandler gameInputsHandler;
 
     public void ResumeGame()
@@ -14,7 +13,8 @@ public class PauseMenuController : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
+        SceneLoader.NextScene = "MenuPrincipal"; // Define a próxima cena a ser carregada
+        SceneManager.LoadScene("Loading Scene"); // Carrega a cena de loading
     }
 
     public void SaveProgress()
@@ -25,12 +25,22 @@ public class PauseMenuController : MonoBehaviour
     public void OpenOptions()
     {
         gameInputsHandler.TogglePause(); // Fecha o menu de pausa para abrir o menu de opções
-        optionsMenu.SetActive(true);
-    }
+        GameObject pai = GameObject.Find("CanvasDoMenuOpções");
 
+        // Se o objeto "Pai" for encontrado, encontre o objeto "Filho" dentro dele
+        if (pai != null)
+        {
+            GameObject filho = pai.transform.Find("Options").gameObject;
+
+            // Se o objeto "Filho" for encontrado, ative-o
+            if (filho != null)
+            {
+                filho.SetActive(true);
+            }
+        }
+    }
     public void CloseOptions()
     {
-        optionsMenu.SetActive(false);
-        gameInputsHandler.TogglePause(); // Retorna para o menu de pausa
+ 
     }
 }
